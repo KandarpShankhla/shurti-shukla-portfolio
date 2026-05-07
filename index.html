@@ -1,0 +1,3767 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shruti Shukla — Strategic Communication & Brand Narrative Specialist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500&family=Outfit:wght@200;300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --void: #080807;
+      --deep: #111110;
+      --ink: #1c1b18;
+      --mid: #3a3834;
+      --muted: #787470;
+      --rule: #2e2d29;
+      --rule-light: #e2ddd6;
+      --ivory: #f5f2ec;
+      --cream: #ede8df;
+      --warm-white: #faf7f2;
+      --gold: #c5963a;
+      --gold-dim: #9a7430;
+      --gold-pale: #e8d5a8;
+      --moss: #2d3d2a;
+      --radius: 0px;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-snap-type: y mandatory;
+      scroll-padding-top: 72px;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: var(--warm-white);
+      color: var(--ink);
+      overflow-x: hidden;
+      cursor: default;
+    }
+
+    /* ─── SCROLLBAR ─────────────────────────── */
+    ::-webkit-scrollbar {
+      width: 3px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--cream);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--gold);
+    }
+
+    /* ─── SELECTION ─────────────────────────── */
+    ::selection {
+      background: var(--gold);
+      color: var(--void);
+    }
+
+    /* ─── CUSTOM CURSOR ──────────────────────── */
+    .cursor-dot {
+      position: fixed;
+      width: 6px;
+      height: 6px;
+      background: var(--gold);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 9999;
+      transition: transform 0.1s ease;
+      transform: translate(-50%, -50%);
+    }
+
+    .cursor-ring {
+      position: fixed;
+      width: 36px;
+      height: 36px;
+      border: 1px solid rgba(197, 150, 58, 0.5);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 9998;
+      transition: transform 0.15s ease, width 0.3s, height 0.3s, border-color 0.3s;
+      transform: translate(-50%, -50%);
+    }
+
+    body:hover .cursor-dot {
+      opacity: 1;
+    }
+
+    /* ─── NAV ────────────────────────────────── */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 200;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 5rem;
+      background: rgba(250, 247, 242, 0.88);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--rule-light);
+      transition: padding 0.4s ease, background 0.4s;
+    }
+
+    nav.scrolled {
+      padding: 1rem 5rem;
+    }
+
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.8rem;
+      list-style: none;
+      align-items: center;
+    }
+
+    .nav-links a {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      font-weight: 400;
+      transition: color 0.25s;
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: var(--gold);
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+      transform-origin: left;
+    }
+
+    .nav-links a:hover {
+      color: var(--gold);
+    }
+
+    .nav-links a:hover::after {
+      transform: scaleX(1);
+    }
+
+    .nav-cta {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      background: var(--ink);
+      color: var(--ivory);
+      padding: 0.7rem 1.6rem;
+      text-decoration: none;
+      transition: background 0.25s, color 0.25s;
+    }
+
+    .nav-cta:hover {
+      background: var(--gold);
+      color: var(--void);
+    }
+
+    /* ─── HERO ────────────────────────────────── */
+    .hero {
+      min-height: 100vh;
+      background: var(--void);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .hero-noise {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+      background-size: 256px 256px;
+      opacity: 0.4;
+    }
+
+    .hero-grid-lines {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      background-image:
+        linear-gradient(rgba(197, 150, 58, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(197, 150, 58, 0.04) 1px, transparent 1px);
+      background-size: 80px 80px;
+    }
+
+    .hero-main {
+      flex: 1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding-top: 6rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 7rem 4rem 7rem 8rem;
+    }
+
+    .hero-eyebrow {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 2.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      opacity: 0;
+      animation: heroRise 0.9s cubic-bezier(.16, .84, .24, 1) 0.25s forwards;
+    }
+
+    .hero-eyebrow::before {
+      content: '';
+      display: block;
+      width: 50px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    .hero-name {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(3.8rem, 6.5vw, 6.5rem);
+      font-weight: 400;
+      line-height: 1.0;
+      color: var(--ivory);
+      margin-bottom: 0.2rem;
+      opacity: 0;
+      transform: translateY(72px);
+      filter: blur(8px);
+      animation: heroTitleRise 1.15s cubic-bezier(.16, .84, .24, 1) 0.45s forwards;
+    }
+
+    .hero-name-italic {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(3.8rem, 6.5vw, 6.5rem);
+      font-weight: 400;
+      line-height: 1.0;
+      font-style: italic;
+      color: var(--gold);
+      margin-bottom: 3rem;
+      opacity: 0;
+      transform: translateY(72px);
+      filter: blur(8px);
+      animation: heroTitleRise 1.15s cubic-bezier(.16, .84, .24, 1) 0.58s forwards;
+    }
+
+    .hero-descriptor {
+      font-size: 0.88rem;
+      line-height: 1.95;
+      color: rgba(245, 242, 236, 0.5);
+      max-width: 420px;
+      font-weight: 300;
+      margin-bottom: 3.5rem;
+      opacity: 0;
+      animation: heroRise 0.95s cubic-bezier(.16, .84, .24, 1) 0.9s forwards;
+    }
+
+    .hero-specialisms {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      margin-bottom: 3.5rem;
+      opacity: 0;
+      animation: heroRise 0.95s cubic-bezier(.16, .84, .24, 1) 1.05s forwards;
+    }
+
+    .specialism-line {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(245, 242, 236, 0.38);
+      transition: color 0.3s;
+    }
+
+    .specialism-line:hover {
+      color: var(--gold-pale);
+    }
+
+    .specialism-line .spec-mark {
+      color: var(--gold);
+      font-size: 0.55rem;
+    }
+
+    .hero-ctas {
+      display: flex;
+      gap: 1.2rem;
+      opacity: 0;
+      animation: heroRise 0.95s cubic-bezier(.16, .84, .24, 1) 1.2s forwards;
+    }
+
+    .btn-hero-primary {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      background: var(--gold);
+      color: var(--void);
+      padding: 1rem 2.4rem;
+      text-decoration: none;
+      transition: background 0.25s, transform 0.2s;
+      display: inline-block;
+      font-weight: 500;
+    }
+
+    .btn-hero-primary:hover {
+      background: var(--ivory);
+      transform: translateY(-2px);
+    }
+
+    .btn-hero-outline {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      border: 1px solid rgba(245, 242, 236, 0.25);
+      color: rgba(245, 242, 236, 0.6);
+      padding: 1rem 2.4rem;
+      text-decoration: none;
+      transition: border-color 0.25s, color 0.25s;
+      display: inline-block;
+    }
+
+    .btn-hero-outline:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+    }
+
+    .hero-right {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      padding: 4rem;
+      border-left: 1px solid rgba(245, 242, 236, 0.06);
+    }
+
+    .hero-large-initial {
+      font-family: 'Playfair Display', serif;
+      font-size: 22rem;
+      font-weight: 900;
+      line-height: 0.9;
+      color: transparent;
+      -webkit-text-stroke: 1px rgba(197, 150, 58, 0.12);
+      letter-spacing: -0.06em;
+      user-select: none;
+      position: absolute;
+      opacity: 0;
+      animation: fadeIn 1.5s ease 0.8s forwards;
+    }
+
+    .hero-portrait-frame {
+      width: min(68%, 430px);
+      aspect-ratio: 4 / 5;
+      position: relative;
+      z-index: 2;
+      border: 1px solid rgba(197, 150, 58, 0.38);
+      padding: 0.75rem;
+      opacity: 0;
+      transform: translateY(36px) scale(0.97);
+      animation: portraitReveal 1.15s cubic-bezier(.2, .75, .2, 1) 0.9s forwards;
+    }
+
+    .hero-portrait-frame::before {
+      content: '';
+      position: absolute;
+      inset: -1.1rem 1.1rem 1.1rem -1.1rem;
+      border: 1px solid rgba(245, 242, 236, 0.09);
+      z-index: -1;
+    }
+
+    .hero-portrait-frame::after {
+      content: '';
+      position: absolute;
+      inset: 0.75rem;
+      background: linear-gradient(180deg, rgba(8, 8, 7, 0) 45%, rgba(8, 8, 7, 0.45) 100%);
+      pointer-events: none;
+    }
+
+    .hero-portrait {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 50% 34%;
+      display: block;
+      filter: saturate(0.92) contrast(1.04);
+    }
+
+    .hero-stats-stack {
+      position: absolute;
+      bottom: 5rem;
+      left: 4rem;
+      right: 4rem;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-top: 1px solid rgba(245, 242, 236, 0.08);
+      padding-top: 2rem;
+      opacity: 0;
+      animation: fadeUp 0.9s ease 1.3s forwards;
+    }
+
+    .h-stat {
+      padding-right: 2rem;
+    }
+
+    .h-stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      font-weight: 400;
+      color: var(--ivory);
+      line-height: 1;
+    }
+
+    .h-stat-num span {
+      font-style: italic;
+      color: var(--gold);
+      font-size: 1.6rem;
+    }
+
+    .h-stat-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(245, 242, 236, 0.3);
+      margin-top: 0.5rem;
+    }
+
+    /* MARQUEE BAR */
+    .marquee-bar {
+      background: var(--gold);
+      overflow: hidden;
+      padding: 0.9rem 0;
+      position: relative;
+      z-index: 2;
+    }
+
+    .marquee-track {
+      display: flex;
+      gap: 0;
+      white-space: nowrap;
+      animation: marqueeScroll 28s linear infinite;
+    }
+
+    .marquee-item {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--void);
+      padding: 0 3rem;
+      font-weight: 500;
+    }
+
+    .marquee-item::after {
+      content: '✦';
+      margin-left: 3rem;
+      opacity: 0.5;
+    }
+
+    @keyframes marqueeScroll {
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+    /* ─── SECTION FRAMEWORK ──────────────────── */
+    section {
+      padding: 8rem 0;
+      scroll-snap-align: start;
+      scroll-snap-stop: always;
+      scroll-margin-top: 72px;
+    }
+
+    .container {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 5rem;
+    }
+
+    .container-wide {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 0 5rem;
+    }
+
+    .section-header {
+      margin-bottom: 5.5rem;
+    }
+
+    .s-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.4rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .s-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--rule-light);
+      max-width: 120px;
+    }
+
+    .s-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.2rem, 4vw, 3.6rem);
+      font-weight: 400;
+      line-height: 1.15;
+      color: var(--ink);
+    }
+
+    .s-title em {
+      font-style: italic;
+      color: var(--gold);
+    }
+
+    .s-sub {
+      font-size: 0.95rem;
+      color: var(--muted);
+      margin-top: 1.2rem;
+      max-width: 540px;
+      line-height: 1.85;
+      font-weight: 300;
+    }
+
+    /* ─── ANIMATIONS ─────────────────────────── */
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(28px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes heroRise {
+      from {
+        opacity: 0;
+        transform: translateY(34px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes heroTitleRise {
+      from {
+        opacity: 0;
+        transform: translateY(72px);
+        filter: blur(8px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes portraitReveal {
+      from {
+        opacity: 0;
+        transform: translateY(36px) scale(0.97);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity 0.75s ease, transform 0.75s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .reveal-delay-1 {
+      transition-delay: 0.1s;
+    }
+
+    .reveal-delay-2 {
+      transition-delay: 0.2s;
+    }
+
+    .reveal-delay-3 {
+      transition-delay: 0.3s;
+    }
+
+    .reveal-delay-4 {
+      transition-delay: 0.4s;
+    }
+
+    .parallax-section {
+      position: sticky;
+      top: 0;
+      min-height: 100vh;
+      overflow: hidden;
+      isolation: isolate;
+      z-index: var(--stack-index, 1);
+      box-shadow: 0 -38px 90px rgba(8, 8, 7, 0.32);
+    }
+
+    .parallax-section>.container,
+    .parallax-section>.container-wide {
+      transform: translate3d(0, var(--parallax-offset, 0px), 0) scale(var(--parallax-scale, 1));
+      will-change: transform;
+      transition: transform 0.08s linear;
+    }
+
+    .source-links,
+    .govt-source-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+      margin-top: 1.5rem;
+    }
+
+    .source-link,
+    .govt-source-link {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: color 0.2s, border-color 0.2s, background 0.2s;
+    }
+
+    .source-link {
+      color: var(--gold-dim);
+      border: 1px solid rgba(197, 150, 58, 0.28);
+      padding: 0.55rem 0.75rem;
+    }
+
+    .source-link:hover {
+      color: var(--ink);
+      border-color: var(--gold);
+      background: rgba(197, 150, 58, 0.08);
+    }
+
+    .govt-source-link {
+      color: rgba(245, 242, 236, 0.78);
+      border: 1px solid rgba(197, 150, 58, 0.28);
+      padding: 0.5rem 0.7rem;
+      background: rgba(0, 0, 0, 0.16);
+    }
+
+    .govt-source-link:hover {
+      color: var(--gold-pale);
+      border-color: var(--gold);
+    }
+
+    /* ─── POSITIONING STATEMENT ──────────────── */
+    .position-section {
+      background: var(--cream);
+      padding: 8rem 0;
+    }
+
+    .position-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 5rem;
+      text-align: center;
+    }
+
+    .position-quote-mark {
+      font-family: 'Playfair Display', serif;
+      font-size: 5rem;
+      color: var(--gold);
+      opacity: 0.25;
+      line-height: 0.6;
+      margin-bottom: 2rem;
+      display: block;
+    }
+
+    .position-statement {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.5rem, 2.8vw, 2.15rem);
+      font-weight: 400;
+      line-height: 1.6;
+      color: var(--ink);
+    }
+
+    .position-statement em {
+      font-style: italic;
+      color: var(--gold-dim);
+    }
+
+    .position-body {
+      font-size: 1rem;
+      color: var(--mid);
+      line-height: 1.95;
+      font-weight: 300;
+      max-width: 720px;
+      margin: 2.5rem auto 0;
+    }
+
+    /* ─── EXPERTISE GRID ─────────────────────── */
+    .expertise-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border: 1px solid var(--rule-light);
+    }
+
+    .exp-card {
+      padding: 3rem 2.5rem;
+      border-right: 1px solid var(--rule-light);
+      border-bottom: 1px solid var(--rule-light);
+      position: relative;
+      overflow: hidden;
+      transition: background 0.35s;
+    }
+
+    .exp-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--gold);
+      transform: scaleX(0);
+      transition: transform 0.4s ease;
+      transform-origin: left;
+    }
+
+    .exp-card:hover {
+      background: var(--cream);
+    }
+
+    .exp-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .exp-card:nth-child(4n) {
+      border-right: none;
+    }
+
+    .exp-card:nth-last-child(-n+4) {
+      border-bottom: none;
+    }
+
+    .exp-num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.58rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.8rem;
+      display: block;
+    }
+
+    .exp-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 1.2rem;
+      line-height: 1.3;
+    }
+
+    .exp-items {
+      list-style: none;
+    }
+
+    .exp-items li {
+      font-size: 0.8rem;
+      color: var(--mid);
+      padding: 0.35rem 0;
+      border-bottom: 1px solid var(--rule-light);
+      font-weight: 300;
+      line-height: 1.5;
+    }
+
+    .exp-items li:last-child {
+      border-bottom: none;
+    }
+
+    /* ─── INDUSTRY MATRIX ────────────────────── */
+    .matrix-section {
+      background: var(--ink);
+    }
+
+    .matrix-section .s-title {
+      color: var(--ivory);
+    }
+
+    .matrix-section .s-title em {
+      color: var(--gold-pale);
+    }
+
+    .matrix-section .s-label {
+      color: var(--gold);
+    }
+
+    .matrix-section .s-label::after {
+      background: rgba(245, 242, 236, 0.12);
+    }
+
+    .matrix-section .s-sub {
+      color: rgba(245, 242, 236, 0.45);
+    }
+
+    .matrix-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1px;
+      background: rgba(245, 242, 236, 0.06);
+    }
+
+    .matrix-cell {
+      background: var(--ink);
+      padding: 2.5rem 2rem;
+      transition: background 0.3s;
+    }
+
+    .matrix-cell:hover {
+      background: rgba(197, 150, 58, 0.08);
+    }
+
+    .matrix-cell-num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.55rem;
+      letter-spacing: 0.2em;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    .matrix-cell-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: var(--ivory);
+      margin-bottom: 0.8rem;
+      line-height: 1.25;
+    }
+
+    .matrix-cell-items {
+      font-size: 0.75rem;
+      color: rgba(245, 242, 236, 0.35);
+      line-height: 1.9;
+      font-weight: 300;
+    }
+
+    /* ─── CASE STUDIES ───────────────────────── */
+    .cases-section {
+      background: var(--void);
+      padding: 8rem 0 4rem;
+    }
+
+    .cases-section .s-title {
+      color: var(--ivory);
+    }
+
+    .cases-section .s-title em {
+      color: var(--gold);
+    }
+
+    .cases-section .s-label {
+      color: var(--gold);
+    }
+
+    .cases-section .s-label::after {
+      background: rgba(245, 242, 236, 0.1);
+    }
+
+    .cases-section .s-sub {
+      color: rgba(245, 242, 236, 0.4);
+    }
+
+    .case-item {
+      border: 1px solid rgba(245, 242, 236, 0.07);
+      margin-bottom: 2px;
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      transition: background 0.3s;
+    }
+
+    .case-item:hover {
+      background: rgba(245, 242, 236, 0.02);
+    }
+
+    .case-sidebar {
+      padding: 3.5rem 3rem;
+      border-right: 1px solid rgba(245, 242, 236, 0.07);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    .case-sidebar::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 3px;
+      height: 0;
+      background: var(--gold);
+      transition: height 0.5s ease;
+    }
+
+    .case-item:hover .case-sidebar::before {
+      height: 100%;
+    }
+
+    .case-idx {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(197, 150, 58, 0.5);
+    }
+
+    .case-client-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: var(--ivory);
+      line-height: 1.25;
+      margin: 1.5rem 0 1.2rem;
+    }
+
+    .case-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .case-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.55rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      border: 1px solid rgba(245, 242, 236, 0.12);
+      padding: 0.3rem 0.7rem;
+      color: rgba(245, 242, 236, 0.35);
+    }
+
+    .case-body {
+      padding: 3.5rem;
+    }
+
+    .case-meta-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.5rem;
+      margin-bottom: 2.5rem;
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid rgba(245, 242, 236, 0.06);
+    }
+
+    .case-meta-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.58rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.6rem;
+    }
+
+    .case-meta-val {
+      font-size: 0.88rem;
+      color: rgba(245, 242, 236, 0.6);
+      line-height: 1.75;
+      font-weight: 300;
+    }
+
+    .case-strategy-block {
+      margin-bottom: 2rem;
+    }
+
+    .case-strategy-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.58rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(197, 150, 58, 0.6);
+      margin-bottom: 0.7rem;
+    }
+
+    .case-strategy-text {
+      font-size: 0.9rem;
+      color: rgba(245, 242, 236, 0.55);
+      line-height: 1.85;
+      font-weight: 300;
+    }
+
+    .case-deliverables {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .deliv-chip {
+      font-size: 0.72rem;
+      background: rgba(197, 150, 58, 0.1);
+      color: var(--gold-pale);
+      padding: 0.3rem 0.85rem;
+      border: 1px solid rgba(197, 150, 58, 0.2);
+      font-weight: 400;
+    }
+
+    .case-link-btn {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(197, 150, 58, 0.3);
+      padding-bottom: 0.2rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .case-link-btn:hover {
+      color: var(--ivory);
+      border-color: var(--ivory);
+    }
+
+    /* ─── GOVERNMENT SECTION ─────────────────── */
+    .govt-section {
+      background: #2c3d2a;
+      padding: 8rem 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .govt-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      background-image:
+        repeating-linear-gradient(0deg, transparent, transparent 79px, rgba(197, 150, 58, 0.04) 79px, rgba(197, 150, 58, 0.04) 80px),
+        repeating-linear-gradient(90deg, transparent, transparent 79px, rgba(197, 150, 58, 0.04) 79px, rgba(197, 150, 58, 0.04) 80px);
+      pointer-events: none;
+    }
+
+    .govt-section .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .govt-section .s-title {
+      color: var(--ivory);
+    }
+
+    .govt-section .s-title em {
+      color: var(--gold-pale);
+    }
+
+    .govt-section .s-label {
+      color: var(--gold);
+    }
+
+    .govt-section .s-label::after {
+      background: rgba(245, 242, 236, 0.15);
+    }
+
+    .govt-section .s-sub {
+      color: rgba(245, 242, 236, 0.5);
+    }
+
+    .govt-banner {
+      background: rgba(0, 0, 0, 0.25);
+      border: 1px solid rgba(197, 150, 58, 0.25);
+      border-left: 4px solid var(--gold);
+      padding: 2.5rem 3rem;
+      margin-bottom: 4rem;
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+    }
+
+    .govt-banner-icon {
+      font-size: 2.5rem;
+      opacity: 0.85;
+      flex-shrink: 0;
+    }
+
+    .govt-banner-text {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      font-style: italic;
+      color: rgba(245, 242, 236, 0.85);
+      line-height: 1.7;
+      font-weight: 400;
+    }
+
+    .govt-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .govt-card {
+      background: rgba(0, 0, 0, 0.2);
+      padding: 2.8rem 2.5rem;
+      border: 1px solid rgba(197, 150, 58, 0.12);
+      transition: background 0.3s, border-color 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .govt-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--gold);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s ease;
+    }
+
+    .govt-card:hover {
+      background: rgba(0, 0, 0, 0.35);
+      border-color: rgba(197, 150, 58, 0.3);
+    }
+
+    .govt-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .govt-card-type {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.58rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.2rem;
+      display: block;
+    }
+
+    .govt-card-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: var(--ivory);
+      margin-bottom: 1rem;
+      line-height: 1.3;
+    }
+
+    .govt-card-desc {
+      font-size: 0.82rem;
+      color: rgba(245, 242, 236, 0.55);
+      line-height: 1.85;
+      font-weight: 300;
+      margin-bottom: 1.5rem;
+    }
+
+    .govt-delivs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+    }
+
+    .govt-deliv {
+      font-size: 0.65rem;
+      border: 1px solid rgba(245, 242, 236, 0.15);
+      padding: 0.25rem 0.6rem;
+      color: rgba(245, 242, 236, 0.45);
+      font-family: 'JetBrains Mono', monospace;
+      letter-spacing: 0.08em;
+      background: rgba(0, 0, 0, 0.2);
+    }
+
+    /* ─── MEDICAL SECTION ────────────────────── */
+    .medical-section {
+      background: var(--warm-white);
+      padding: 8rem 0;
+    }
+
+    .medical-intro-block {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 7rem;
+      align-items: start;
+      margin-bottom: 5rem;
+    }
+
+    .medical-intro-text p {
+      font-size: 0.95rem;
+      color: var(--mid);
+      line-height: 1.95;
+      font-weight: 300;
+      margin-bottom: 1.3rem;
+    }
+
+    .medical-intro-text p:first-child {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.35rem;
+      color: var(--ink);
+      font-weight: 400;
+      line-height: 1.65;
+    }
+
+    .medical-credentials {
+      border: 1px solid var(--rule-light);
+    }
+
+    .med-cred-row {
+      padding: 1.5rem 2rem;
+      border-bottom: 1px solid var(--rule-light);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .med-cred-row:last-child {
+      border-bottom: none;
+    }
+
+    .med-cred-spec {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    .med-cred-detail {
+      font-size: 0.82rem;
+      color: var(--mid);
+      font-weight: 300;
+    }
+
+    .medical-clients-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .med-client-card {
+      border: 1px solid var(--rule-light);
+      padding: 2.5rem;
+      position: relative;
+      overflow: hidden;
+      transition: border-color 0.3s, box-shadow 0.3s;
+    }
+
+    .med-client-card:hover {
+      border-color: var(--gold);
+      box-shadow: 0 8px 40px rgba(197, 150, 58, 0.08);
+    }
+
+    .med-client-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.58rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    .med-client-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 0.8rem;
+    }
+
+    .med-client-desc {
+      font-size: 0.82rem;
+      color: var(--muted);
+      line-height: 1.85;
+      font-weight: 300;
+      margin-bottom: 1.5rem;
+    }
+
+    .med-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .med-link {
+      font-size: 0.75rem;
+      color: var(--gold-dim);
+      text-decoration: none;
+      font-weight: 400;
+      transition: color 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .med-link:hover {
+      color: var(--ink);
+    }
+
+    .med-link::before {
+      content: '↗';
+      font-size: 0.65rem;
+    }
+
+    /* ─── TOURISM SECTION ────────────────────── */
+    .tourism-section {
+      background: var(--ink);
+      padding: 8rem 0;
+    }
+
+    .tourism-section .s-title {
+      color: var(--ivory);
+    }
+
+    .tourism-section .s-title em {
+      color: var(--gold-pale);
+    }
+
+    .tourism-section .s-label {
+      color: var(--gold);
+    }
+
+    .tourism-section .s-label::after {
+      background: rgba(245, 242, 236, 0.1);
+    }
+
+    .tourism-section .s-sub {
+      color: rgba(245, 242, 236, 0.4);
+    }
+
+    .tourism-feature {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: rgba(245, 242, 236, 0.07);
+      margin-bottom: 2px;
+    }
+
+    .tourism-card {
+      background: var(--ink);
+      padding: 4rem 3.5rem;
+      position: relative;
+      overflow: hidden;
+      transition: background 0.3s;
+    }
+
+    .tourism-card:hover {
+      background: rgba(197, 150, 58, 0.06);
+    }
+
+    .tourism-card-num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.58rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(197, 150, 58, 0.5);
+      margin-bottom: 1.5rem;
+      display: block;
+    }
+
+    .tourism-card-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.45rem;
+      font-weight: 400;
+      color: var(--ivory);
+      line-height: 1.3;
+      margin-bottom: 1rem;
+    }
+
+    .tourism-card-italic {
+      font-style: italic;
+      color: var(--gold-pale);
+    }
+
+    .tourism-card-desc {
+      font-size: 0.85rem;
+      color: rgba(245, 242, 236, 0.45);
+      line-height: 1.9;
+      font-weight: 300;
+      margin-bottom: 1.8rem;
+    }
+
+    .tourism-scope {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .tourism-scope-item {
+      font-size: 0.68rem;
+      border: 1px solid rgba(245, 242, 236, 0.1);
+      padding: 0.28rem 0.7rem;
+      color: rgba(245, 242, 236, 0.3);
+      font-family: 'JetBrains Mono', monospace;
+      letter-spacing: 0.08em;
+    }
+
+    .tourism-link {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-top: 1.5rem;
+      border-bottom: 1px solid rgba(197, 150, 58, 0.3);
+      padding-bottom: 0.2rem;
+      transition: color 0.2s;
+    }
+
+    .tourism-link:hover {
+      color: var(--ivory);
+    }
+
+    /* ─── WEBSITE & BRAND ────────────────────── */
+    .brand-section {
+      background: var(--cream);
+      padding: 8rem 0;
+    }
+
+    .brand-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .brand-card {
+      background: var(--warm-white);
+      border: 1px solid var(--rule-light);
+      padding: 2.8rem 2.5rem;
+      transition: border-color 0.3s, transform 0.3s;
+    }
+
+    .brand-card:hover {
+      border-color: var(--gold);
+      transform: translateY(-4px);
+    }
+
+    .brand-card-cat {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.58rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.2rem;
+      display: block;
+    }
+
+    .brand-card-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 0.8rem;
+    }
+
+    .brand-card-desc {
+      font-size: 0.82rem;
+      color: var(--mid);
+      line-height: 1.85;
+      font-weight: 300;
+      margin-bottom: 1.5rem;
+    }
+
+    .brand-scope {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .brand-scope-item {
+      font-size: 0.68rem;
+      border: 1px solid var(--rule-light);
+      padding: 0.25rem 0.65rem;
+      color: var(--muted);
+      font-weight: 300;
+    }
+
+    .brand-visit {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.1em;
+      color: var(--gold-dim);
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 1.2rem;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+
+    .brand-visit:hover {
+      border-color: var(--gold-dim);
+    }
+
+    /* ─── PRODUCT COMM ───────────────────────── */
+    .product-section {
+      background: var(--warm-white);
+      padding: 8rem 0;
+    }
+
+    .product-intro {
+      display: grid;
+      grid-template-columns: 1fr 1.8fr;
+      gap: 6rem;
+      margin-bottom: 5rem;
+      align-items: start;
+    }
+
+    .product-statement {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 400;
+      font-style: italic;
+      color: var(--ink);
+      line-height: 1.6;
+      position: sticky;
+      top: 8rem;
+    }
+
+    .product-statement strong {
+      font-style: normal;
+      font-weight: 700;
+      color: var(--gold);
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1px;
+      background: var(--rule-light);
+    }
+
+    .product-card {
+      background: var(--warm-white);
+      padding: 2.5rem;
+      transition: background 0.3s;
+    }
+
+    .product-card:hover {
+      background: var(--cream);
+    }
+
+    .product-card-market {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.58rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    .product-card-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 0.8rem;
+    }
+
+    .product-card-desc {
+      font-size: 0.82rem;
+      color: var(--mid);
+      line-height: 1.85;
+      font-weight: 300;
+    }
+
+    .product-card-links {
+      margin-top: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .product-link {
+      font-size: 0.72rem;
+      color: var(--gold-dim);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      transition: color 0.2s;
+    }
+
+    .product-link:hover {
+      color: var(--ink);
+    }
+
+    .product-link::before {
+      content: '→';
+      font-size: 0.65rem;
+    }
+
+    /* ─── EXPERIENCE TIMELINE ────────────────── */
+    .timeline-section {
+      background: var(--ink);
+      padding: 8rem 0;
+    }
+
+    .timeline-section .s-title {
+      color: var(--ivory);
+    }
+
+    .timeline-section .s-title em {
+      color: var(--gold-pale);
+    }
+
+    .timeline-section .s-label {
+      color: var(--gold);
+    }
+
+    .timeline-section .s-label::after {
+      background: rgba(245, 242, 236, 0.1);
+    }
+
+    .timeline-section .s-sub {
+      color: rgba(245, 242, 236, 0.4);
+    }
+
+    .timeline {
+      position: relative;
+      padding-left: 4rem;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: rgba(245, 242, 236, 0.08);
+    }
+
+    .timeline-entry {
+      position: relative;
+      padding: 0 0 4rem 3rem;
+      margin-bottom: 0;
+    }
+
+    .timeline-entry::before {
+      content: '';
+      position: absolute;
+      left: -4px;
+      top: 0.4rem;
+      width: 9px;
+      height: 9px;
+      background: var(--gold);
+      border: 2px solid var(--ink);
+      border-radius: 0;
+      /* square dot */
+    }
+
+    .t-period {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.8rem;
+    }
+
+    .t-role {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      font-weight: 500;
+      color: var(--ivory);
+      margin-bottom: 0.4rem;
+      line-height: 1.3;
+    }
+
+    .t-org {
+      font-size: 0.82rem;
+      color: rgba(245, 242, 236, 0.4);
+      font-weight: 300;
+      margin-bottom: 1rem;
+      font-style: italic;
+    }
+
+    .t-desc {
+      font-size: 0.85rem;
+      color: rgba(245, 242, 236, 0.45);
+      line-height: 1.9;
+      font-weight: 300;
+      max-width: 680px;
+    }
+
+    /* ─── CREDENTIALS ────────────────────────── */
+    .credentials-section {
+      background: var(--warm-white);
+      padding: 8rem 0;
+    }
+
+    .creds-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.5rem;
+    }
+
+    .cred-block {
+      border-top: 2px solid var(--rule-light);
+      padding-top: 2rem;
+      transition: border-color 0.3s;
+    }
+
+    .cred-block:hover {
+      border-color: var(--gold);
+    }
+
+    .cred-category {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.2rem;
+    }
+
+    .cred-item {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 0.4rem;
+      line-height: 1.4;
+    }
+
+    .cred-detail {
+      font-size: 0.8rem;
+      color: var(--muted);
+      font-weight: 300;
+      line-height: 1.7;
+    }
+
+    /* ─── CONTACT ────────────────────────────── */
+    .contact-section {
+      background: var(--void);
+      padding: 8rem 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact-bg-text {
+      position: absolute;
+      bottom: -3rem;
+      right: 5rem;
+      font-family: 'Playfair Display', serif;
+      font-size: 14rem;
+      font-weight: 900;
+      color: transparent;
+      -webkit-text-stroke: 1px rgba(197, 150, 58, 0.06);
+      line-height: 1;
+      user-select: none;
+      pointer-events: none;
+    }
+
+    .contact-inner {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 8rem;
+      align-items: start;
+    }
+
+    .contact-headline {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.5rem, 4.5vw, 4rem);
+      font-weight: 400;
+      color: var(--ivory);
+      line-height: 1.15;
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-headline em {
+      font-style: italic;
+      color: var(--gold);
+    }
+
+    .contact-body {
+      font-size: 0.95rem;
+      color: rgba(245, 242, 236, 0.45);
+      line-height: 1.9;
+      font-weight: 300;
+      max-width: 480px;
+      margin-bottom: 3rem;
+    }
+
+    .contact-info {
+      margin-top: 2rem;
+    }
+
+    .contact-row {
+      display: flex;
+      align-items: start;
+      gap: 1.5rem;
+      padding: 1.5rem 0;
+      border-bottom: 1px solid rgba(245, 242, 236, 0.07);
+    }
+
+    .contact-row:first-child {
+      border-top: 1px solid rgba(245, 242, 236, 0.07);
+    }
+
+    .contact-row-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      flex-shrink: 0;
+      width: 80px;
+      padding-top: 0.1rem;
+    }
+
+    .contact-row-val {
+      font-size: 0.9rem;
+      color: rgba(245, 242, 236, 0.6);
+      font-weight: 300;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    a.contact-row-val:hover {
+      color: var(--gold);
+    }
+
+    .contact-availability {
+      background: rgba(197, 150, 58, 0.06);
+      border: 1px solid rgba(197, 150, 58, 0.15);
+      padding: 2.5rem;
+      margin-top: 2rem;
+    }
+
+    .avail-dot {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      background: #4caf50;
+      border-radius: 50%;
+      margin-right: 0.6rem;
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      50% {
+        opacity: 0.5;
+        transform: scale(0.85);
+      }
+    }
+
+    .avail-status {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold-pale);
+      margin-bottom: 0.8rem;
+    }
+
+    .avail-text {
+      font-size: 0.85rem;
+      color: rgba(245, 242, 236, 0.45);
+      line-height: 1.7;
+      font-weight: 300;
+    }
+
+    /* ─── FOOTER ─────────────────────────────── */
+    footer {
+      background: var(--void);
+      border-top: 1px solid rgba(245, 242, 236, 0.06);
+      padding: 2rem 5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 0.9rem;
+      color: rgba(245, 242, 236, 0.3);
+    }
+
+    .footer-note {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(245, 242, 236, 0.2);
+    }
+
+    /* ─── SECTION DIVIDER ────────────────────── */
+    .divider {
+      height: 1px;
+      background: var(--rule-light);
+      margin: 0;
+    }
+
+    /* ─── HIGHLIGHT BLOCK ────────────────────── */
+    .highlight-strip {
+      background: var(--gold);
+      padding: 3rem 5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+
+    .highlight-text {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: var(--void);
+      line-height: 1.5;
+      max-width: 700px;
+    }
+
+    .highlight-text em {
+      font-style: italic;
+    }
+
+    .highlight-cta {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      background: var(--void);
+      color: var(--ivory);
+      padding: 1rem 2.2rem;
+      text-decoration: none;
+      flex-shrink: 0;
+      transition: background 0.25s;
+    }
+
+    .highlight-cta:hover {
+      background: var(--ink);
+    }
+
+    /* ─── LIFESTYLE/FASHION SECTION ──────────── */
+    .lifestyle-section {
+      background: var(--cream);
+      padding: 8rem 0;
+    }
+
+    .lifestyle-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 5rem;
+      align-items: start;
+    }
+
+    .lifestyle-intro p {
+      font-size: 0.92rem;
+      color: var(--mid);
+      line-height: 1.95;
+      font-weight: 300;
+      margin-bottom: 1.2rem;
+    }
+
+    .lifestyle-intro p:first-child {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      color: var(--ink);
+      font-weight: 400;
+      line-height: 1.65;
+    }
+
+    .lifestyle-links-panel {
+      border: 1px solid var(--rule-light);
+      padding: 2.5rem;
+    }
+
+    .lifestyle-links-title {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.5rem;
+    }
+
+    .lifestyle-link-item {
+      padding: 0.85rem 0;
+      border-bottom: 1px solid var(--rule-light);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .lifestyle-link-item:last-child {
+      border-bottom: none;
+    }
+
+    .l-link-name {
+      font-size: 0.82rem;
+      color: var(--ink);
+      font-weight: 400;
+    }
+
+    .l-link-cat {
+      font-size: 0.7rem;
+      color: var(--muted);
+      font-weight: 300;
+      font-style: italic;
+    }
+
+    .l-link-arrow {
+      font-size: 0.75rem;
+      color: var(--gold-dim);
+      text-decoration: none;
+      transition: color 0.2s, transform 0.2s;
+      display: inline-block;
+    }
+
+    .l-link-arrow:hover {
+      color: var(--ink);
+      transform: translateX(3px);
+    }
+
+    /* ─── EDUCATION SECTION ──────────────────── */
+    .education-section {
+      background: var(--warm-white);
+      padding: 8rem 0;
+    }
+
+    .edu-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+    }
+
+    .edu-card {
+      border: 1px solid var(--rule-light);
+      padding: 2.8rem;
+      position: relative;
+    }
+
+    .edu-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 3px;
+      background: var(--gold);
+    }
+
+    .edu-card-type {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.58rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.2rem;
+      display: block;
+    }
+
+    .edu-card-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 0.8rem;
+    }
+
+    .edu-card-desc {
+      font-size: 0.82rem;
+      color: var(--muted);
+      line-height: 1.85;
+      font-weight: 300;
+    }
+
+    /* ─── MOBILE NAV TOGGLE ──────────────────── */
+    .nav-toggle {
+      display: none;
+    }
+
+    /* ─── RESPONSIVE ─────────────────────────── */
+    @media (max-width: 1100px) {
+      .expertise-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .matrix-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      nav {
+        padding: 1.4rem 2.5rem;
+      }
+
+      .container,
+      .container-wide {
+        padding: 0 2.5rem;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .hero-main {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-right {
+        display: none;
+      }
+
+      .hero-left {
+        padding: 5rem 2.5rem 4rem;
+      }
+
+      .case-item {
+        grid-template-columns: 1fr;
+      }
+
+      .case-sidebar {
+        border-right: none;
+        border-bottom: 1px solid rgba(245, 242, 236, 0.07);
+      }
+
+      .tourism-feature {
+        grid-template-columns: 1fr;
+      }
+
+      .brand-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .medical-clients-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-inner {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+
+      .govt-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .creds-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .lifestyle-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .edu-grid {
+        grid-template-columns: 1fr;
+      }
+
+      nav {
+        padding: 1.2rem 2rem;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .highlight-strip {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      section {
+        padding: 5rem 0;
+      }
+
+      .product-intro {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+
+      .medical-intro-block {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .expertise-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .matrix-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .matrix-cell:nth-child(10) {
+        grid-column: span 1;
+      }
+
+      .brand-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .creds-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .product-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .case-meta-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-stats-stack {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .h-stat:last-child {
+        display: none;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+        scroll-snap-type: none;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+
+      .parallax-section>.container,
+      .parallax-section>.container-wide {
+        transform: none !important;
+      }
+
+      .parallax-section {
+        position: relative;
+        min-height: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ─── NAV ─────────────────────────────── -->
+  <nav id="mainNav">
+    <a href="#" class="nav-logo">Shruti Shukla</a>
+    <ul class="nav-links">
+      <li><a href="#expertise">Expertise</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#government">Authority</a></li>
+      <li><a href="#healthcare">Healthcare</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact" class="nav-cta">Engage</a></li>
+    </ul>
+  </nav>
+
+  <!-- ─── HERO ─────────────────────────────── -->
+  <section class="hero" id="top">
+    <div class="hero-noise"></div>
+    <div class="hero-grid-lines"></div>
+
+    <div class="hero-main">
+      <div class="hero-left">
+        <div class="hero-eyebrow">Strategic Communication Specialist</div>
+        <div class="hero-name">Shruti</div>
+        <div class="hero-name-italic">Shukla.</div>
+
+        <p class="hero-descriptor">
+          Brand narrative consultant and strategic communication professional working across government, healthcare,
+          tourism, eCommerce, and institutional sectors. Based in Kanpur — operating nationally.
+        </p>
+
+        <div class="hero-specialisms">
+          <div class="specialism-line"><span class="spec-mark">◆</span> Government & Institutional Communication</div>
+          <div class="specialism-line"><span class="spec-mark">◆</span> Healthcare & Medical Communication</div>
+          <div class="specialism-line"><span class="spec-mark">◆</span> Tourism & Destination Storytelling</div>
+          <div class="specialism-line"><span class="spec-mark">◆</span> SEO & Website Brand Narrative</div>
+          <div class="specialism-line"><span class="spec-mark">◆</span> Conversion-Oriented Product Communication</div>
+          <div class="specialism-line"><span class="spec-mark">◆</span> Campaign & Political Communication</div>
+        </div>
+
+        <div class="hero-ctas">
+          <a href="#work" class="btn-hero-primary">View Work</a>
+          <a href="#contact" class="btn-hero-outline">Get In Touch</a>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="hero-large-initial">SS</div>
+        <div class="hero-portrait-frame">
+          <img src="Shruti Shukla.png" alt="Shruti Shukla portrait" class="hero-portrait">
+        </div>
+        <div class="hero-stats-stack">
+          <div class="h-stat">
+            <div class="h-stat-num">7<span>+</span></div>
+            <div class="h-stat-label">Industries Served</div>
+          </div>
+          <div class="h-stat">
+            <div class="h-stat-num">40<span>+</span></div>
+            <div class="h-stat-label">Projects Delivered</div>
+          </div>
+          <div class="h-stat">
+            <div class="h-stat-num">3<span>yr</span></div>
+            <div class="h-stat-label">Active Practice</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MARQUEE -->
+    <div class="marquee-bar">
+      <div class="marquee-track">
+        <span class="marquee-item">Strategic Communication</span>
+        <span class="marquee-item">Government Narratives</span>
+        <span class="marquee-item">Healthcare Content</span>
+        <span class="marquee-item">SEO Architecture</span>
+        <span class="marquee-item">Brand Communication</span>
+        <span class="marquee-item">Tourism Storytelling</span>
+        <span class="marquee-item">Campaign Writing</span>
+        <span class="marquee-item">Product Narrative</span>
+        <span class="marquee-item">Institutional Reports</span>
+        <span class="marquee-item">Website Copy</span>
+        <span class="marquee-item">Political Messaging</span>
+        <span class="marquee-item">Strategic Communication</span>
+        <span class="marquee-item">Government Narratives</span>
+        <span class="marquee-item">Healthcare Content</span>
+        <span class="marquee-item">SEO Architecture</span>
+        <span class="marquee-item">Brand Communication</span>
+        <span class="marquee-item">Tourism Storytelling</span>
+        <span class="marquee-item">Campaign Writing</span>
+        <span class="marquee-item">Product Narrative</span>
+        <span class="marquee-item">Institutional Reports</span>
+        <span class="marquee-item">Website Copy</span>
+        <span class="marquee-item">Political Messaging</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── POSITIONING STATEMENT ─────────────── -->
+  <section class="position-section">
+    <div class="position-inner reveal">
+      <span class="position-quote-mark">"</span>
+      <p class="position-statement">
+        Communication is not the act of writing words —<br>
+        it is the act of <em>making things happen.</em>
+      </p>
+      <p class="position-body">
+        With a foundation in institutional communication and a practice spanning government campaigns, clinical
+        healthcare, luxury tourism, and brand strategy, I bring a structured, research-led approach to every engagement.
+        My work is built on one discipline: <strong>understanding what an audience needs to think, feel, and do</strong>
+        — and engineering the words that get them there.
+      </p>
+    </div>
+  </section>
+
+  <!-- ─── EXPERTISE ─────────────────────────── -->
+  <section id="expertise">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="s-label">01 — Core Competencies</div>
+        <h2 class="s-title">Strategic Communication <em>Capabilities</em></h2>
+        <p class="s-sub">Eight disciplines. One integrated communication practice.</p>
+      </div>
+
+      <div class="expertise-grid reveal">
+        <div class="exp-card">
+          <span class="exp-num">A.01</span>
+          <div class="exp-title">Government & Institutional Communication</div>
+          <ul class="exp-items">
+            <li>Campaign narrative development</li>
+            <li>Ministerial & state govt. communication</li>
+            <li>Policy communication & success stories</li>
+            <li>Institutional report writing</li>
+            <li>Political messaging & social strategy</li>
+          </ul>
+        </div>
+        <div class="exp-card reveal reveal-delay-1">
+          <span class="exp-num">A.02</span>
+          <div class="exp-title">SEO & Website Content Architecture</div>
+          <ul class="exp-items">
+            <li>Homepage & conversion copy</li>
+            <li>Long-form SEO blog strategy</li>
+            <li>Landing page narratives</li>
+            <li>Service page communication</li>
+            <li>Keyword-to-intent writing</li>
+          </ul>
+        </div>
+        <div class="exp-card reveal reveal-delay-2">
+          <span class="exp-num">A.03</span>
+          <div class="exp-title">Healthcare & Medical Communication</div>
+          <ul class="exp-items">
+            <li>Patient education content</li>
+            <li>Ophthalmology & dental service pages</li>
+            <li>Clinical awareness blogs</li>
+            <li>Ad landing page copy</li>
+            <li>Healthcare website narrative</li>
+          </ul>
+        </div>
+        <div class="exp-card reveal reveal-delay-3">
+          <span class="exp-num">A.04</span>
+          <div class="exp-title">Tourism & Destination Storytelling</div>
+          <ul class="exp-items">
+            <li>Luxury tourism editorial writing</li>
+            <li>IRCTC tour package content</li>
+            <li>Heritage & temple destination copy</li>
+            <li>Experiential travel narratives</li>
+            <li>India–International tourism packages</li>
+          </ul>
+        </div>
+        <div class="exp-card reveal">
+          <span class="exp-num">A.05</span>
+          <div class="exp-title">Campaign & Ad Communication</div>
+          <ul class="exp-items">
+            <li>Google & Meta ad copy</li>
+            <li>Social media campaign narratives</li>
+            <li>YouTube awareness scripts</li>
+            <li>Creative ad concepts</li>
+            <li>Political campaign social content</li>
+          </ul>
+        </div>
+        <div class="exp-card reveal reveal-delay-1">
+          <span class="exp-num">A.06</span>
+          <div class="exp-title">Product & eCommerce Communication</div>
+          <ul class="exp-items">
+            <li>Feature-to-benefit product writing</li>
+            <li>US & India market product pages</li>
+            <li>Conversion-oriented descriptions</li>
+            <li>SEO-integrated product narratives</li>
+            <li>Category & collection page copy</li>
+          </ul>
+        </div>
+        <div class="exp-card reveal reveal-delay-2">
+          <span class="exp-num">A.07</span>
+          <div class="exp-title">Brand Narrative & Positioning</div>
+          <ul class="exp-items">
+            <li>Brand voice development</li>
+            <li>Website communication strategy</li>
+            <li>About & mission page writing</li>
+            <li>Founder story development</li>
+            <li>Trust-building content architecture</li>
+          </ul>
+        </div>
+        <div class="exp-card reveal reveal-delay-3">
+          <span class="exp-num">A.08</span>
+          <div class="exp-title">Pitch Decks & Presentation Writing</div>
+          <ul class="exp-items">
+            <li>Government & ministry pitch decks</li>
+            <li>Client-facing narrative decks</li>
+            <li>Sector overview documents</li>
+            <li>Conceptual communication decks</li>
+            <li>LDA, Ministry-level presentations</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── INDUSTRY MATRIX ────────────────────── -->
+  <section class="matrix-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="s-label" style="color:var(--gold);">02 — Industry Footprint</div>
+        <h2 class="s-title">Cross-Industry <em>Communication Matrix</em></h2>
+        <p class="s-sub">A single practice. Ten distinct industry verticals. Consistent strategic depth.</p>
+      </div>
+
+      <div class="matrix-grid reveal">
+        <div class="matrix-cell">
+          <span class="matrix-cell-num">01</span>
+          <div class="matrix-cell-name">Government & Political</div>
+          <div class="matrix-cell-items">Maha Kumbh 2025 · Lok Sabha 2024 · UP State Govt · Deepotsav Ayodhya · NCDC
+            Ministry</div>
+        </div>
+        <div class="matrix-cell">
+          <span class="matrix-cell-num">02</span>
+          <div class="matrix-cell-name">Healthcare & Medical</div>
+          <div class="matrix-cell-items">JL Rohatgi Eye Hospital · God's Service Eye Clinic · Dr Sobti Dental Care</div>
+        </div>
+        <div class="matrix-cell">
+          <span class="matrix-cell-num">03</span>
+          <div class="matrix-cell-name">Tourism & Travel</div>
+          <div class="matrix-cell-items">IRCTC Tourism · The Maharajas Express · India–Dubai Packages · Temple Tours
+          </div>
+        </div>
+        <div class="matrix-cell">
+          <span class="matrix-cell-num">04</span>
+          <div class="matrix-cell-name">Interiors & Lifestyle</div>
+          <div class="matrix-cell-items">Homevio Interiors · Festive Folks · Brand Narrative & Website Communication
+          </div>
+        </div>
+        <div class="matrix-cell">
+          <span class="matrix-cell-num">05</span>
+          <div class="matrix-cell-name">Fashion & Apparel</div>
+          <div class="matrix-cell-items">Albeli Fashion · Festive Folks · Banarasi Silk Editorials · Lifestyle Blogs
+          </div>
+        </div>
+        <div class="matrix-cell">
+          <span class="matrix-cell-num">06</span>
+          <div class="matrix-cell-name">eCommerce — US Market</div>
+          <div class="matrix-cell-items">Blackout Curtains USA · KulKuf Wellness Products · Commercial Product Lines
+          </div>
+        </div>
+        <div class="matrix-cell">
+          <span class="matrix-cell-num">07</span>
+          <div class="matrix-cell-name">Education & EdTech</div>
+          <div class="matrix-cell-items">Amity University · EdTech Platform Content · Institutional Communication</div>
+        </div>
+        <div class="matrix-cell">
+          <span class="matrix-cell-num">08</span>
+          <div class="matrix-cell-name">Corporate Services</div>
+          <div class="matrix-cell-items">Fontys Corporate · Website Brand Narrative · B2B Communication Architecture
+          </div>
+        </div>
+        <div class="matrix-cell">
+          <span class="matrix-cell-num">09</span>
+          <div class="matrix-cell-name">Equestrian & Sports</div>
+          <div class="matrix-cell-items">Equestrian India · IndiaMart Product Communication · Niche Industry Writing
+          </div>
+        </div>
+        <div class="matrix-cell">
+          <span class="matrix-cell-num">10</span>
+          <div class="matrix-cell-name">Wellness & Tech</div>
+          <div class="matrix-cell-items">KulKuf Cooling Technology · Health Product Narratives · Benefit-led Copy</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CASE STUDIES ───────────────────────── -->
+  <section class="cases-section" id="work">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="s-label">03 — Selected Case Studies</div>
+        <h2 class="s-title">Work that <em>Demonstrates</em></h2>
+        <p class="s-sub">Strategy-led communication across five categories. Each project reflects a distinct challenge
+          and a deliberate solution.</p>
+      </div>
+
+      <!-- Case 1: Maha Kumbh -->
+      <div class="case-item reveal">
+        <div class="case-sidebar">
+          <div>
+            <div class="case-idx">Case 01</div>
+            <div class="case-client-name">Maha Kumbh 2025 & Lok Sabha 2024</div>
+            <div class="case-tags">
+              <span class="case-tag">Government</span>
+              <span class="case-tag">Campaign</span>
+              <span class="case-tag">Social</span>
+            </div>
+          </div>
+        </div>
+        <div class="case-body">
+          <div class="case-meta-grid">
+            <div>
+              <div class="case-meta-label">Objective</div>
+              <div class="case-meta-val">Drive national awareness, citizen engagement, and narrative credibility for two
+                landmark government events.</div>
+            </div>
+            <div>
+              <div class="case-meta-label">Communication Challenge</div>
+              <div class="case-meta-val">Translate dense government objectives into public-facing messaging that feels
+                authentic, emotionally resonant, and shareable at scale.</div>
+            </div>
+            <div>
+              <div class="case-meta-label">Strategy</div>
+              <div class="case-meta-val">Platform-specific messaging across Instagram and X with a tone that balanced
+                cultural reverence with political clarity.</div>
+            </div>
+          </div>
+          <div class="case-strategy-block">
+            <div class="case-strategy-label">Approach & Execution</div>
+            <div class="case-strategy-text">Developed a full social content suite for Maha Kumbh 2025 — the world's
+              largest human gathering — including creative captions, awareness posts, and cultural narratives for
+              Instagram and X. For Lok Sabha 2024, crafted campaign-grade political messaging aligned with official
+              communication mandates. Worked within government brief parameters while introducing editorial quality into
+              every output.</div>
+          </div>
+          <div class="case-deliverables">
+            <span class="deliv-chip">Instagram Creatives (Series)</span>
+            <span class="deliv-chip">Twitter / X Campaign Posts</span>
+            <span class="deliv-chip">Political Campaign Narratives</span>
+            <span class="deliv-chip">Government Awareness Content</span>
+            <span class="deliv-chip">Cultural Storytelling Posts</span>
+          </div>
+          <div class="source-links">
+            <a href="https://www.instagram.com/p/DHTQqxsoQa0/?hl=en&img_index=4" target="_blank"
+              rel="noopener noreferrer" class="source-link">Instagram Proof</a>
+            <a href="https://x.com/MahaKumbh_2025/status/1893240022146388006?t=ZV5ZepYsZXaaRj03Mut4Fg&s=03"
+              target="_blank" rel="noopener noreferrer" class="source-link">X Campaign Proof</a>
+            <a href="https://transformingup.in/blog/lakhpati-didis-self-help-groups-213.html" target="_blank"
+              rel="noopener noreferrer" class="source-link">Transforming UP Story</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Case 2: JL Rohatgi -->
+      <div class="case-item reveal">
+        <div class="case-sidebar">
+          <div>
+            <div class="case-idx">Case 02</div>
+            <div class="case-client-name">JL Rohatgi Eye Hospital</div>
+            <div class="case-tags">
+              <span class="case-tag">Healthcare</span>
+              <span class="case-tag">SEO</span>
+              <span class="case-tag">Web Content</span>
+            </div>
+          </div>
+        </div>
+        <div class="case-body">
+          <div class="case-meta-grid">
+            <div>
+              <div class="case-meta-label">Objective</div>
+              <div class="case-meta-val">Position a leading Kanpur ophthalmology institution as a trusted regional
+                authority for eye care through digital communication.</div>
+            </div>
+            <div>
+              <div class="case-meta-label">Communication Challenge</div>
+              <div class="case-meta-val">Bridge the gap between clinical accuracy and patient-accessible language, while
+                achieving search visibility for competitive medical keywords.</div>
+            </div>
+            <div>
+              <div class="case-meta-label">SEO Strategy</div>
+              <div class="case-meta-val">Long-tail keyword targeting for procedures (TransPRK, Phaco Surgery, Cornea
+                Treatment) with trust-building service page architecture.</div>
+            </div>
+          </div>
+          <div class="case-strategy-block">
+            <div class="case-strategy-label">Approach & Execution</div>
+            <div class="case-strategy-text">Developed the hospital's complete service page suite covering Cornea,
+              Retina, and Glaucoma specialisations. Wrote patient-education blogs on procedures including Phaco surgery,
+              LASIK vs TransPRK comparison, and pink-eye awareness — each calibrated for Google SERP performance and
+              patient trust. Maintained clinical authority without alienating lay readers.</div>
+          </div>
+          <div class="case-deliverables">
+            <span class="deliv-chip">Service Pages (Cornea, Retina, Glaucoma)</span>
+            <span class="deliv-chip">SEO Procedure Articles</span>
+            <span class="deliv-chip">Patient Education Blogs</span>
+            <span class="deliv-chip">About & Institutional Pages</span>
+          </div>
+          <a href="https://jlreyehospital.org/" target="_blank" class="case-link-btn">Visit Live Site ↗</a>
+        </div>
+      </div>
+
+      <!-- Case 3: IRCTC Tourism -->
+      <div class="case-item reveal">
+        <div class="case-sidebar">
+          <div>
+            <div class="case-idx">Case 03</div>
+            <div class="case-client-name">IRCTC Tourism & The Maharajas' Express</div>
+            <div class="case-tags">
+              <span class="case-tag">Tourism</span>
+              <span class="case-tag">Luxury</span>
+              <span class="case-tag">Editorial</span>
+            </div>
+          </div>
+        </div>
+        <div class="case-body">
+          <div class="case-meta-grid">
+            <div>
+              <div class="case-meta-label">Objective</div>
+              <div class="case-meta-val">Create destination-led editorial content for India's national rail tourism body
+                and its ultra-luxury train brand.</div>
+            </div>
+            <div>
+              <div class="case-meta-label">Communication Challenge</div>
+              <div class="case-meta-val">Elevate functional tour package descriptions into immersive narrative
+                experiences that sell emotion, not just itinerary.</div>
+            </div>
+            <div>
+              <div class="case-meta-label">Tone Direction</div>
+              <div class="case-meta-val">Refined editorial storytelling for Maharajas' Express; aspirational cultural
+                discovery for IRCTC temple tour packages.</div>
+            </div>
+          </div>
+          <div class="case-strategy-block">
+            <div class="case-strategy-label">Approach & Execution</div>
+            <div class="case-strategy-text">For the Maharajas' Express, wrote an immersive destination editorial on
+              Orchha — its palaces, riverfront, and layered heritage — placing the luxury train journey at the centre of
+              a cultural revelation. For IRCTC, developed North India Temple Tour and India-to-Dubai package pages that
+              combined spiritual narrative with practical conversion copy.</div>
+          </div>
+          <div class="case-deliverables">
+            <span class="deliv-chip">Maharajas' Express Editorial (Orchha)</span>
+            <span class="deliv-chip">North India Temple Tour Package Page</span>
+            <span class="deliv-chip">India–Dubai Tour Package Content</span>
+            <span class="deliv-chip">Destination Storytelling Articles</span>
+          </div>
+          <div class="source-links">
+            <a href="https://blog.the-maharajas.com/with-maharajas-express-orchha-reveals-its-hidden-palaces-riverfront-charm-and-stories-carved-into-every-corner/"
+              target="_blank" class="source-link">Maharajas' Express Article</a>
+            <a href="https://www.irctctourism.com/north-india-temple-tour-packages/" target="_blank"
+              class="source-link">IRCTC Temple Tours</a>
+            <a href="https://www.irctctourism.com/india-to-dubai-tour-packages/" target="_blank"
+              class="source-link">IRCTC Dubai Package</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Case 4: Fontys / KulKuf / Homevio -->
+      <div class="case-item reveal">
+        <div class="case-sidebar">
+          <div>
+            <div class="case-idx">Case 04</div>
+            <div class="case-client-name">Website Brand Communication — Multiple Clients</div>
+            <div class="case-tags">
+              <span class="case-tag">Brand</span>
+              <span class="case-tag">Web Copy</span>
+              <span class="case-tag">UX Content</span>
+            </div>
+          </div>
+        </div>
+        <div class="case-body">
+          <div class="case-meta-grid">
+            <div>
+              <div class="case-meta-label">Clients</div>
+              <div class="case-meta-val">Fontys (Corporate Services) · Homevio Interiors · Festive Folks · KulKuf · Dr
+                Sobti Dental Care</div>
+            </div>
+            <div>
+              <div class="case-meta-label">Communication Scope</div>
+              <div class="case-meta-val">Full website content architecture — homepages, service/product pages, about
+                sections, contact and trust-building content.</div>
+            </div>
+            <div>
+              <div class="case-meta-label">Strategic Focus</div>
+              <div class="case-meta-val">Conversion-oriented messaging that builds brand credibility and guides user
+                intent through structured content flow.</div>
+            </div>
+          </div>
+          <div class="case-strategy-block">
+            <div class="case-strategy-label">Approach & Execution</div>
+            <div class="case-strategy-text">Delivered end-to-end website copy for diverse brand categories — from a
+              corporate solutions provider (Fontys) to an interior design studio (Homevio) to a festive lifestyle brand
+              (Festive Folks). Each engagement began with brand positioning work before writing a single word. Voice,
+              hierarchy, and conversion logic were established per client, ensuring content architecture served both
+              brand and business objectives.</div>
+          </div>
+          <div class="case-deliverables">
+            <span class="deliv-chip">Homepage Messaging</span>
+            <span class="deliv-chip">Service & About Pages</span>
+            <span class="deliv-chip">Brand Voice Guidelines</span>
+            <span class="deliv-chip">CTA & Conversion Copy</span>
+            <span class="deliv-chip">SEO Meta Structure</span>
+          </div>
+          <div class="source-links">
+            <a href="https://fontyscs.com/" target="_blank" class="source-link">Fontys</a>
+            <a href="https://homviointeriors.in/" target="_blank" class="source-link">Homevio</a>
+            <a href="https://festivefolks.com/" target="_blank" class="source-link">Festive Folks</a>
+            <a href="https://kulkuf.com/" target="_blank" class="source-link">KulKuf</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Case 5: Blackout Curtains / KulKuf USA -->
+      <div class="case-item reveal">
+        <div class="case-sidebar">
+          <div>
+            <div class="case-idx">Case 05</div>
+            <div class="case-client-name">Product Communication — US eCommerce Market</div>
+            <div class="case-tags">
+              <span class="case-tag">eCommerce</span>
+              <span class="case-tag">Product</span>
+              <span class="case-tag">US Market</span>
+            </div>
+          </div>
+        </div>
+        <div class="case-body">
+          <div class="case-meta-grid">
+            <div>
+              <div class="case-meta-label">Clients</div>
+              <div class="case-meta-val">Blackout Curtains USA · KulKuf Wellness (Wristband, Cooling Cap, Cooling Visor)
+                · Equestrian India</div>
+            </div>
+            <div>
+              <div class="case-meta-label">Communication Challenge</div>
+              <div class="case-meta-val">Write for the US consumer mindset — benefit-first, trust-building, SEO-aware —
+                across highly varied product categories.</div>
+            </div>
+            <div>
+              <div class="case-meta-label">Strategy</div>
+              <div class="case-meta-val">Feature-to-benefit translation, objection handling through copy, and
+                SEO-integrated product titles with conversion-grade language.</div>
+            </div>
+          </div>
+          <div class="case-strategy-block">
+            <div class="case-strategy-label">Approach & Execution</div>
+            <div class="case-strategy-text">Delivered commercial-grade product descriptions for Blackout Curtains USA
+              (commercial and room-dividing product lines) and KulKuf's innovative cooling technology range. Each
+              product page was written with the Amazon/DTC framework — scannable, persuasive, and trust-building. For
+              Equestrian India (IndiaMart), developed speciality product listings for a niche B2B market — horse rugs,
+              blankets, and coolers — with precision and category understanding.</div>
+          </div>
+          <div class="case-deliverables">
+            <span class="deliv-chip">Product Description Pages</span>
+            <span class="deliv-chip">Feature–Benefit Copy</span>
+            <span class="deliv-chip">SEO Title & Meta Content</span>
+            <span class="deliv-chip">Category Landing Copy</span>
+            <span class="deliv-chip">B2B Product Listings</span>
+          </div>
+          <div class="source-links">
+            <a href="https://blackoutcurtains.com/commercial-blackout-curtains/" target="_blank"
+              class="source-link">Blackout Commercial</a>
+            <a href="https://blackoutcurtains.com/room-dividing-curtains/" target="_blank" class="source-link">Room
+              Dividing</a>
+            <a href="https://kulkuf.com/product/kulkuf-wrist-band/" target="_blank" class="source-link">KulKuf
+              Wristband</a>
+            <a href="https://www.indiamart.com/equestrianindia/horse-rugs-horse-blanket-horse-coolers.html#211"
+              target="_blank" class="source-link">IndiaMart Listing</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ─── GOVERNMENT SECTION ─────────────────── -->
+  <section class="govt-section" id="government">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="s-label">04 — Government & Institutional</div>
+        <h2 class="s-title">Authority-Grade <em>Institutional Work</em></h2>
+        <p class="s-sub">Communication at the intersection of policy, public narrative, and national relevance.</p>
+      </div>
+
+      <div class="govt-banner reveal">
+        <div class="govt-banner-icon">🏛</div>
+        <div class="govt-banner-text">
+          "Institutional communication demands a different discipline — one that understands both the gravity of policy
+          and the accessibility of public language. This work required navigating both."
+        </div>
+      </div>
+
+      <div class="govt-grid reveal">
+        <div class="govt-card">
+          <span class="govt-card-type">National Event · 2025</span>
+          <div class="govt-card-name">Maha Kumbh 2025</div>
+          <div class="govt-card-desc">Developed social media content strategy and creative copies for the world's
+            largest human gathering. Multi-platform campaign spanning Instagram and X (Twitter) with culturally resonant
+            narratives for a nationally significant religious and cultural event.</div>
+          <div class="govt-delivs">
+            <span class="govt-deliv">Instagram Creatives</span>
+            <span class="govt-deliv">Twitter Campaign</span>
+            <span class="govt-deliv">Cultural Narratives</span>
+          </div>
+          <div class="govt-source-links">
+            <a href="https://www.instagram.com/p/DHTQqxsoQa0/?hl=en&img_index=4" target="_blank"
+              rel="noopener noreferrer" class="govt-source-link">Instagram 01</a>
+            <a href="https://www.instagram.com/p/DIL1a40IghO/?hl=en&img_index=3" target="_blank"
+              rel="noopener noreferrer" class="govt-source-link">Instagram 02</a>
+            <a href="https://www.instagram.com/p/DH5eaG2v6UZ/?hl=en&img_index=3" target="_blank"
+              rel="noopener noreferrer" class="govt-source-link">Instagram 03</a>
+            <a href="https://x.com/MahaKumbh_2025/status/1893240022146388006?t=ZV5ZepYsZXaaRj03Mut4Fg&s=03"
+              target="_blank" rel="noopener noreferrer" class="govt-source-link">X Post 01</a>
+            <a href="https://x.com/MahaKumbh_2025/status/1893335904724402432?t=Uqp3KM55a2_acSXtKJvTyg&s=03"
+              target="_blank" rel="noopener noreferrer" class="govt-source-link">X Post 02</a>
+            <a href="https://x.com/MahaKumbh_2025/status/1896011661607387504?t=ybskOVG-_fqEdJhl__aSGw&s=03"
+              target="_blank" rel="noopener noreferrer" class="govt-source-link">X Post 03</a>
+          </div>
+        </div>
+        <div class="govt-card">
+          <span class="govt-card-type">National Election · 2024</span>
+          <div class="govt-card-name">Lok Sabha Election Campaign 2024</div>
+          <div class="govt-card-desc">Crafted political communication content aligned with national election messaging
+            requirements. Worked within government communication parameters to develop public-facing narrative content
+            across digital platforms.</div>
+          <div class="govt-delivs">
+            <span class="govt-deliv">Political Messaging</span>
+            <span class="govt-deliv">Campaign Copies</span>
+            <span class="govt-deliv">Social Strategy</span>
+          </div>
+        </div>
+        <div class="govt-card">
+          <span class="govt-card-type">State Government · UP</span>
+          <div class="govt-card-name">Transforming UP Initiative</div>
+          <div class="govt-card-desc">Authored success story features for the UP Government's development communication
+            vertical — including "Lakhpati Didis" (self-help groups) and the first school in Vantangiya. Humanising
+            policy outcomes through narrative journalism.</div>
+          <div class="govt-delivs">
+            <span class="govt-deliv">Success Story Features</span>
+            <span class="govt-deliv">Development Narratives</span>
+            <span class="govt-deliv">Policy Storytelling</span>
+          </div>
+          <div class="govt-source-links">
+            <a href="https://transformingup.in/blog/lakhpati-didis-self-help-groups-213.html" target="_blank"
+              rel="noopener noreferrer" class="govt-source-link">Lakhpati Didis</a>
+            <a href="https://transformingup.in/blog/First-School-in-Vantangiya--201.html" target="_blank"
+              rel="noopener noreferrer" class="govt-source-link">Vantangiya School</a>
+            <a href="https://transformingup.in/sectors.html" target="_blank" rel="noopener noreferrer"
+              class="govt-source-link">Sectors Portal</a>
+          </div>
+        </div>
+        <div class="govt-card">
+          <span class="govt-card-type">Ministry · MoC</span>
+          <div class="govt-card-name">NCDC — Ministry of Cooperation</div>
+          <div class="govt-card-desc">As institutional intern, wrote formal proposals and project reports for government
+            modernisation initiatives under India's Ministry of Cooperation. Direct exposure to ministry-grade
+            communication standards.</div>
+          <div class="govt-delivs">
+            <span class="govt-deliv">Govt Proposals</span>
+            <span class="govt-deliv">Project Reports</span>
+            <span class="govt-deliv">Institutional Writing</span>
+          </div>
+        </div>
+        <div class="govt-card">
+          <span class="govt-card-type">State Event · Ayodhya</span>
+          <div class="govt-card-name">Deepotsav Ayodhya</div>
+          <div class="govt-card-desc">Developed editorial blog content for Deepotsav — one of UP Government's flagship
+            cultural events in Ayodhya — capturing the cultural, spiritual, and administrative dimensions of the
+            celebration.</div>
+          <div class="govt-delivs">
+            <span class="govt-deliv">Event Blog</span>
+            <span class="govt-deliv">Cultural Narrative</span>
+            <span class="govt-deliv">UP Govt Portal</span>
+          </div>
+          <div class="govt-source-links">
+            <a href="https://transformingup.in/blog/deepotsav-ayodhya-shri-ram-return-celebrations-93.html"
+              target="_blank" rel="noopener noreferrer" class="govt-source-link">Deepotsav Blog</a>
+          </div>
+        </div>
+        <div class="govt-card">
+          <span class="govt-card-type">Pitch Decks · LDA + Ministry</span>
+          <div class="govt-card-name">Government Pitch Decks & Sector Reports</div>
+          <div class="govt-card-desc">Developed client presentation decks for Lucknow Development Authority (LDA) and
+            the Ministry of Food Processing — including sector overviews, communication strategies, and formal
+            presentation narratives for senior government stakeholders.</div>
+          <div class="govt-delivs">
+            <span class="govt-deliv">LDA Pitch Deck</span>
+            <span class="govt-deliv">Sector Overview</span>
+            <span class="govt-deliv">Ministry Presentation</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── MEDICAL SECTION ────────────────────── -->
+  <section class="medical-section" id="healthcare">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="s-label">05 — Healthcare Communication</div>
+        <h2 class="s-title">Medical & Clinical <em>Content Strategy</em></h2>
+        <p class="s-sub">Precision-led communication for ophthalmology and dental practices — where accuracy and
+          accessibility are equally non-negotiable.</p>
+      </div>
+
+      <div class="medical-intro-block reveal">
+        <div class="medical-intro-text">
+          <p>Healthcare communication occupies a distinct space where clinical credibility and patient empathy must
+            co-exist without compromise. Every piece written for these clients was researched to medical standards while
+            being accessible to the general reader.</p>
+          <p>The work spans service page architecture, patient education content, awareness blogs, paid ad landing
+            pages, and digital communication strategy — across ophthalmology and dental specialisations.</p>
+          <p>The objective is not content volume — it is the right content, positioned to build institutional trust,
+            drive local search performance, and ultimately help patients make informed decisions.</p>
+        </div>
+        <div class="medical-credentials">
+          <div class="med-cred-row">
+            <div class="med-cred-spec">Ophthalmology</div>
+            <div class="med-cred-detail">Cornea, Retina, Glaucoma, Cataract, LASIK, TransPRK, Conjunctivitis</div>
+          </div>
+          <div class="med-cred-row">
+            <div class="med-cred-spec">Dental</div>
+            <div class="med-cred-detail">Service pages, ad copy, landing page concepts, new website strategy</div>
+          </div>
+          <div class="med-cred-row">
+            <div class="med-cred-spec">Content Types</div>
+            <div class="med-cred-detail">Service pages, patient education blogs, paid ad copy, landing pages, awareness
+              content</div>
+          </div>
+          <div class="med-cred-row">
+            <div class="med-cred-spec">SEO Strategy</div>
+            <div class="med-cred-detail">Local medical search, procedure-based keywords, patient-intent content mapping
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="medical-clients-grid reveal">
+        <div class="med-client-card">
+          <span class="med-client-tag">Ophthalmology · Kanpur</span>
+          <div class="med-client-name">JL Rohatgi Eye Hospital</div>
+          <div class="med-client-desc">One of Kanpur's leading eye care institutions. Wrote the full website content
+            architecture — from institutional About page to specialised service pages (Cornea, Retina, Glaucoma) and a
+            suite of patient-education blogs covering surgical procedures and eye health awareness.</div>
+          <div class="med-links">
+            <a href="https://jlreyehospital.org/about-us/" target="_blank" class="med-link">About Page</a>
+            <a href="https://jlreyehospital.org/best-cornea-treatment-in-kanpur-at-jlr-eye-hospital/" target="_blank"
+              class="med-link">Cornea Treatment Page</a>
+            <a href="https://jlreyehospital.org/retina-specialist-in-kanpur/" target="_blank" class="med-link">Retina
+              Specialist Page</a>
+            <a href="https://jlreyehospital.org/glaucoma-specialist-in-kanpur/" target="_blank"
+              class="med-link">Glaucoma Specialist Page</a>
+            <a href="https://jlreyehospital.org/what-is-transprk-eye-surgery-why-it-is-better-than-lasik/"
+              target="_blank" class="med-link">TransPRK vs LASIK Blog</a>
+            <a href="https://jlreyehospital.org/phaco-surgery-for-cataract/" target="_blank" class="med-link">Phaco
+              Surgery Article</a>
+            <a href="https://jlreyehospital.org/vision-correction-surgery-is-it-worth-it/" target="_blank"
+              class="med-link">Vision Correction Blog</a>
+            <a href="https://jlreyehospital.org/pink-eye-same-as-conjuctivitis/" target="_blank" class="med-link">Pink
+              Eye Blog</a>
+          </div>
+        </div>
+        <div class="med-client-card">
+          <span class="med-client-tag">Ophthalmology · Kanpur</span>
+          <div class="med-client-name">God's Service Eye Clinic</div>
+          <div class="med-client-desc">Delivered service page content and patient-focused SEO blogs for a specialist eye
+            clinic. Topics included glaucoma laser treatment, cataract surgery, mental health effects on vision, and the
+            role of supplements in eye health — each written for both clinical credibility and search performance.</div>
+          <div class="med-links">
+            <a href="https://godserviceeyeclinic.com/about" target="_blank" class="med-link">About Page</a>
+            <a href="https://godserviceeyeclinic.com/glaucoma-laser-treatment-in-kanpur" target="_blank"
+              class="med-link">Glaucoma Treatment Page</a>
+            <a href="https://godserviceeyeclinic.com/post/anxiety-and-depression-on-vision" target="_blank"
+              class="med-link">Mental Health & Vision Blog</a>
+            <a href="https://godserviceeyeclinic.com/post/how-to-treat-glaucoma" target="_blank"
+              class="med-link">Glaucoma Treatment Blog</a>
+            <a href="https://godserviceeyeclinic.com/post/can-supplement-improve-our-vision" target="_blank"
+              class="med-link">Supplements & Vision Blog</a>
+            <a href="https://godserviceeyeclinic.com/post/five-symptoms-of-poor-eyesight" target="_blank"
+              class="med-link">Poor Eyesight Symptoms</a>
+            <a href="https://godserviceeyeclinic.com/cataract-surgery-in-kanpur" target="_blank"
+              class="med-link">Cataract Surgery Page</a>
+            <a href="https://godserviceeyeclinic.com/other-services" target="_blank" class="med-link">Other Services</a>
+          </div>
+        </div>
+        <div class="med-client-card">
+          <span class="med-client-tag">Dental · Full Strategy</span>
+          <div class="med-client-name">Dr Sobti Dental Care</div>
+          <div class="med-client-desc">End-to-end digital communication strategy for a dental practice undergoing
+            website redesign. Delivered: new website content suggestions, paid ad landing page copy, creative ad
+            concepts, and Google/Meta ad copy. A comprehensive exercise in healthcare brand communication and paid
+            acquisition messaging.</div>
+          <div class="med-links">
+            <a href="https://www.sobtidentalcare.com/" target="_blank" class="med-link">Existing Website (Old)</a>
+            <a href="https://docs.google.com/document/d/1J9mHLR9kAxk-QB1Xp-FkDdrG5AM-QH6qaCY8rsX21uw/edit?tab=t.0"
+              target="_blank" class="med-link">New Website Strategy Doc</a>
+            <a href="https://docs.google.com/document/d/1ZKv4KnAQ3N-vg9w-z_kJfBmVRBeEX5XNPFnFtCJpXYM/edit?tab=t.0"
+              target="_blank" class="med-link">Landing Page Copy</a>
+            <a href="https://docs.google.com/document/d/14GLdaLps0OWAnMODdg_IZOMoFJpwT5gIMoQ3mUWuLOo/edit?tab=t.0"
+              target="_blank" class="med-link">Ad Copy Concepts</a>
+            <a href="https://docs.google.com/document/d/1TgU9DQuM0nV-FN75uAC8Ekvatn-Kq3mZKQdn0lsFvnc/edit?tab=t.0"
+              target="_blank" class="med-link">Campaign Copy Doc</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── HIGHLIGHT STRIP ───────────────────── -->
+  <div class="highlight-strip reveal">
+    <p class="highlight-text">
+      "From a Maha Kumbh creative brief to a cataract surgery explainer to a luxury train editorial — the range is not
+      scattered. <em>It is strategic adaptability.</em>"
+    </p>
+    <a href="#contact" class="highlight-cta">Discuss a Project</a>
+  </div>
+
+  <!-- ─── TOURISM SECTION ───────────────────── -->
+  <section class="tourism-section" id="tourism">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="s-label">06 — Tourism & Destination</div>
+        <h2 class="s-title">Luxury Travel & <em>Destination Storytelling</em></h2>
+        <p class="s-sub">Editorial writing for India's tourism ecosystem — from IRCTC's national packages to the
+          Maharajas' Express luxury rail journey.</p>
+      </div>
+
+      <div class="tourism-feature reveal">
+        <div class="tourism-card">
+          <span class="tourism-card-num">T.01 — Premium Editorial</span>
+          <div class="tourism-card-title">The Maharajas' Express —<br><span class="tourism-card-italic">Orchha
+              Unveiled</span></div>
+          <div class="tourism-card-desc">An immersive destination editorial placing the Maharajas' Express — India's
+            most prestigious luxury train journey — at the centre of Orchha's historical, cultural, and riverfront
+            story. The piece combines heritage storytelling, traveller sensibility, and luxury brand positioning to
+            create a narrative that sells the experience, not just the destination.</div>
+          <div class="tourism-scope">
+            <span class="tourism-scope-item">Destination Editorial</span>
+            <span class="tourism-scope-item">Luxury Travel Narrative</span>
+            <span class="tourism-scope-item">Heritage Storytelling</span>
+            <span class="tourism-scope-item">Brand-Led Content</span>
+          </div>
+          <a href="https://blog.the-maharajas.com/with-maharajas-express-orchha-reveals-its-hidden-palaces-riverfront-charm-and-stories-carved-into-every-corner/"
+            target="_blank" class="tourism-link">Read Full Article ↗</a>
+        </div>
+        <div class="tourism-card">
+          <span class="tourism-card-num">T.02 — IRCTC Official</span>
+          <div class="tourism-card-title">IRCTC Tourism —<br><span class="tourism-card-italic">North India Temple
+              Tours</span></div>
+          <div class="tourism-card-desc">Developed package page content for IRCTC Tourism's North India temple circuit —
+            India's largest rail tourism body. Balanced spiritual resonance with practical tour information, structured
+            for both conversion and SEO performance. The content targets pilgrimage tourists seeking cultural
+            authenticity through rail journeys.</div>
+          <div class="tourism-scope">
+            <span class="tourism-scope-item">Package Page Copy</span>
+            <span class="tourism-scope-item">Pilgrimage Narrative</span>
+            <span class="tourism-scope-item">SEO-Optimised</span>
+            <span class="tourism-scope-item">Conversion Copy</span>
+          </div>
+          <a href="https://www.irctctourism.com/north-india-temple-tour-packages/" target="_blank"
+            class="tourism-link">View Live Page ↗</a>
+        </div>
+      </div>
+      <div class="tourism-feature reveal">
+        <div class="tourism-card">
+          <span class="tourism-card-num">T.03 — International Package</span>
+          <div class="tourism-card-title">IRCTC — <span class="tourism-card-italic">India to Dubai Tour Packages</span>
+          </div>
+          <div class="tourism-card-desc">Created the content for IRCTC's India–Dubai outbound tour package page —
+            writing for an aspirational Indian traveller audience seeking their first international experience. Tone
+            balances excitement, reliability, and IRCTC's institutional trust to convert interest into bookings.</div>
+          <div class="tourism-scope">
+            <span class="tourism-scope-item">International Tour Copy</span>
+            <span class="tourism-scope-item">Outbound Tourism</span>
+            <span class="tourism-scope-item">Aspirational Tone</span>
+            <span class="tourism-scope-item">Trust-Building Copy</span>
+          </div>
+          <a href="https://www.irctctourism.com/india-to-dubai-tour-packages/" target="_blank" class="tourism-link">View
+            Live Page ↗</a>
+        </div>
+        <div class="tourism-card" style="border-left: 1px solid rgba(245,242,236,0.07);">
+          <span class="tourism-card-num">T.04 — Sector Credentials</span>
+          <div class="tourism-card-title">Tourism Communication <span class="tourism-card-italic">Capabilities</span>
+          </div>
+          <div class="tourism-card-desc">Across all tourism work, the communication discipline remains consistent:
+            understand what makes a destination or experience compelling, and translate that into words that move people
+            from consideration to action. Whether writing for rail, luxury, pilgrimage, or international — the narrative
+            logic is always the same.</div>
+          <div class="tourism-scope">
+            <span class="tourism-scope-item">Domestic Tourism</span>
+            <span class="tourism-scope-item">International Packages</span>
+            <span class="tourism-scope-item">Luxury Rail</span>
+            <span class="tourism-scope-item">Heritage & Pilgrimage</span>
+            <span class="tourism-scope-item">Editorial Blog Content</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── BRAND & WEBSITE SECTION ───────────── -->
+  <section class="brand-section" id="brand">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="s-label">07 — Website & Brand Communication</div>
+        <h2 class="s-title">Website Narrative & <em>Brand Voice</em></h2>
+        <p class="s-sub">Full website content architecture for brands across five industry verticals.</p>
+      </div>
+
+      <div class="brand-grid reveal">
+        <div class="brand-card">
+          <span class="brand-card-cat">Corporate Services</span>
+          <div class="brand-card-name">Fontys</div>
+          <div class="brand-card-desc">Website content for a corporate solutions provider — structured for authority,
+            clarity, and B2B conversion. Homepage messaging, service communication, and brand narrative aligned to
+            institutional positioning.</div>
+          <div class="brand-scope">
+            <span class="brand-scope-item">Homepage Copy</span>
+            <span class="brand-scope-item">Service Pages</span>
+            <span class="brand-scope-item">Brand Positioning</span>
+          </div>
+          <a href="https://fontyscs.com/" target="_blank" class="brand-visit">fontyscs.com ↗</a>
+        </div>
+        <div class="brand-card">
+          <span class="brand-card-cat">Interiors & Design</span>
+          <div class="brand-card-name">Homevio Interiors</div>
+          <div class="brand-card-desc">Complete website content for an interior design studio — with a tone that
+            balances aspiration, expertise, and approachability. Positioned Homevio as a premium yet accessible design
+            partner for residential clients.</div>
+          <div class="brand-scope">
+            <span class="brand-scope-item">Website Copy</span>
+            <span class="brand-scope-item">Brand Voice</span>
+            <span class="brand-scope-item">Portfolio Narrative</span>
+          </div>
+          <a href="https://homviointeriors.in/" target="_blank" class="brand-visit">homviointeriors.in ↗</a>
+        </div>
+        <div class="brand-card">
+          <span class="brand-card-cat">Lifestyle & Fashion</span>
+          <div class="brand-card-name">Festive Folks</div>
+          <div class="brand-card-desc">Brand communication and website content for a festive lifestyle brand — product
+            pages, homepage messaging, and brand voice that captures the warmth and vibrancy of Indian celebrations
+            without cliché.</div>
+          <div class="brand-scope">
+            <span class="brand-scope-item">Website Content</span>
+            <span class="brand-scope-item">Product Copy</span>
+            <span class="brand-scope-item">Campaign Writing</span>
+          </div>
+          <a href="https://festivefolks.com/" target="_blank" class="brand-visit">festivefolks.com ↗</a>
+        </div>
+        <div class="brand-card">
+          <span class="brand-card-cat">Dental Healthcare</span>
+          <div class="brand-card-name">Dr Sobti Dental Care</div>
+          <div class="brand-card-desc">New website content strategy, service page communication, and digital conversion
+            copy for a dental practice rebuilding its digital presence. Includes landing page architecture and ad copy
+            direction.</div>
+          <div class="brand-scope">
+            <span class="brand-scope-item">Website Strategy</span>
+            <span class="brand-scope-item">Service Pages</span>
+            <span class="brand-scope-item">Ad Copy</span>
+          </div>
+          <a href="https://www.sobtidentalcare.com/" target="_blank" class="brand-visit">sobtidentalcare.com ↗</a>
+        </div>
+        <div class="brand-card">
+          <span class="brand-card-cat">Wellness Technology — US</span>
+          <div class="brand-card-name">KulKuf</div>
+          <div class="brand-card-desc">Website and product communication for an innovative cooling technology brand
+            operating in the US market. Combined technical product accuracy with consumer-facing benefit language to
+            position an unfamiliar product category.</div>
+          <div class="brand-scope">
+            <span class="brand-scope-item">Product Pages</span>
+            <span class="brand-scope-item">Category Copy</span>
+            <span class="brand-scope-item">Brand Communication</span>
+          </div>
+          <a href="https://kulkuf.com/" target="_blank" class="brand-visit">kulkuf.com ↗</a>
+        </div>
+        <div class="brand-card">
+          <span class="brand-card-cat">UP Government Portal</span>
+          <div class="brand-card-name">Transforming UP</div>
+          <div class="brand-card-desc">Feature-length development communication content for the UP Government's official
+            initiative portal — documenting real success stories from rural communities, self-help groups, and
+            educational initiatives across Uttar Pradesh.</div>
+          <div class="brand-scope">
+            <span class="brand-scope-item">Success Stories</span>
+            <span class="brand-scope-item">Feature Writing</span>
+            <span class="brand-scope-item">Govt Portal Content</span>
+          </div>
+          <a href="https://transformingup.in/" target="_blank" class="brand-visit">transformingup.in ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── PRODUCT SECTION ───────────────────── -->
+  <section class="product-section" id="product">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="s-label">08 — Product Communication</div>
+        <h2 class="s-title">Conversion-Oriented <em>Product Narratives</em></h2>
+        <p class="s-sub">Not product descriptions — product communication strategies designed to convert browsers into
+          buyers.</p>
+      </div>
+
+      <div class="product-intro reveal">
+        <div class="product-statement">
+          "A product description that reads like a <strong>spec sheet</strong> sells nothing. One that reads like a
+          <strong>conversation</strong> sells everything."
+        </div>
+        <div>
+          <p style="font-size:0.92rem;color:var(--mid);line-height:1.95;font-weight:300;margin-bottom:1.3rem;">
+            Effective product communication requires understanding the buyer's psychology before touching the keyboard.
+            What are they searching for? What objection do they hold? What language makes them trust you?
+          </p>
+          <p style="font-size:0.92rem;color:var(--mid);line-height:1.95;font-weight:300;">
+            Across US eCommerce and Indian marketplace platforms, the product writing here is calibrated to each
+            market's expectations — feature-forward for technical products, experience-forward for lifestyle goods, and
+            benefit-first for wellness categories.
+          </p>
+        </div>
+      </div>
+
+      <div class="product-grid reveal">
+        <div class="product-card">
+          <span class="product-card-market">US Market · Home Décor</span>
+          <div class="product-card-name">Blackout Curtains USA</div>
+          <div class="product-card-desc">Commercial-grade product communication for commercial and room-dividing curtain
+            lines. Written for a US audience with emphasis on utility, quality, and commercial application — balancing
+            technical specification with lifestyle aspiration.</div>
+          <div class="product-card-links">
+            <a href="https://blackoutcurtains.com/commercial-blackout-curtains/" target="_blank"
+              class="product-link">Commercial Curtains Page</a>
+            <a href="https://blackoutcurtains.com/room-dividing-curtains/" target="_blank" class="product-link">Room
+              Dividing Curtains</a>
+          </div>
+        </div>
+        <div class="product-card">
+          <span class="product-card-market">US Market · Wellness Tech</span>
+          <div class="product-card-name">KulKuf Cooling Technology</div>
+          <div class="product-card-desc">Product narrative for three innovative cooling wellness products — a wristband,
+            a temperature-control cap, and a cooling visor. Each required communicating novel technology in instantly
+            understandable benefit language for an unfamiliar product category.</div>
+          <div class="product-card-links">
+            <a href="https://kulkuf.com/product/kulkuf-wrist-band/" target="_blank" class="product-link">KulKuf
+              Wristband</a>
+            <a href="https://kulkuf.com/product/temperature-control-cooling-cap/" target="_blank"
+              class="product-link">Cooling Cap</a>
+            <a href="https://kulkuf.com/product/cooling-visor/" target="_blank" class="product-link">Cooling Visor</a>
+          </div>
+        </div>
+        <div class="product-card">
+          <span class="product-card-market">India · Fashion & Festive</span>
+          <div class="product-card-name">Festive Folks — Apparel</div>
+          <div class="product-card-desc">Product descriptions for occasion-wear and festive apparel that capture fabric,
+            colour, and mood without defaulting to generic fashion language. Each piece builds the desire for a specific
+            garment through sensory and aspirational communication.</div>
+          <div class="product-card-links">
+            <a href="https://festivefolks.com/product/vivid-gold-hue-satin-finish-ocassion-blouse/" target="_blank"
+              class="product-link">Vivid Gold Satin Blouse</a>
+            <a href="https://festivefolks.com/product/ruby-pink-retro-print-viscose-muslin-round-neck-popover-blouse/"
+              target="_blank" class="product-link">Ruby Pink Viscose Blouse</a>
+          </div>
+        </div>
+        <div class="product-card">
+          <span class="product-card-market">India · B2B Niche · IndiaMart</span>
+          <div class="product-card-name">Equestrian India</div>
+          <div class="product-card-desc">Speciality product listings for India's equestrian supply market — horse rugs,
+            blankets, and coolers. A distinctly niche assignment requiring domain research, product accuracy, and
+            communication suited to a B2B buyer's decision-making process.</div>
+          <div class="product-card-links">
+            <a href="https://www.indiamart.com/equestrianindia/horse-rugs-horse-blanket-horse-coolers.html"
+              target="_blank" class="product-link">Horse Rugs & Blankets — IndiaMart</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FASHION & LIFESTYLE ───────────────── -->
+  <section class="lifestyle-section" id="lifestyle">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="s-label">09 — Lifestyle & Fashion</div>
+        <h2 class="s-title">Fashion & Lifestyle <em>Brand Storytelling</em></h2>
+      </div>
+
+      <div class="lifestyle-grid reveal">
+        <div class="lifestyle-intro">
+          <p>Fashion communication demands a particular sensibility — the ability to make fabric feel like an emotion,
+            and a garment feel like an identity. The work for Albeli, a premium Indian fashion brand, required writing
+            about textile heritage — Banarasi silk, Kora organza — in a voice that honours craft without becoming
+            academic.</p>
+          <p>The blogs written for Albeli sit at the intersection of product storytelling and cultural education. Each
+            piece introduces a fabric or style to a contemporary Indian woman who values heritage but makes modern
+            choices. The tone is warm, knowledgeable, and never condescending.</p>
+          <p>Work for Festive Folks extended this into occasion and festive fashion — translating the visual drama of
+            Indian celebratory wear into purchase-intent language that feels personal rather than promotional.</p>
+        </div>
+        <div class="lifestyle-links-panel">
+          <div class="lifestyle-links-title">Published Work</div>
+          <div class="lifestyle-link-item">
+            <div>
+              <div class="l-link-name">Golden Banarasi Saree</div>
+              <div class="l-link-cat">Albeli — Textile Heritage</div>
+            </div>
+            <a href="https://www.albeli.co/post/golden-banarasi-saree" target="_blank" class="l-link-arrow">↗</a>
+          </div>
+          <div class="lifestyle-link-item">
+            <div>
+              <div class="l-link-name">Kora Organza Silk Saree</div>
+              <div class="l-link-cat">Albeli — Fabric Storytelling</div>
+            </div>
+            <a href="https://www.albeli.co/post/kora-organza-silk-saree" target="_blank" class="l-link-arrow">↗</a>
+          </div>
+          <div class="lifestyle-link-item">
+            <div>
+              <div class="l-link-name">Occasion Blouse — Gold Satin</div>
+              <div class="l-link-cat">Festive Folks — Product Copy</div>
+            </div>
+            <a href="https://festivefolks.com/product/vivid-gold-hue-satin-finish-ocassion-blouse/" target="_blank"
+              class="l-link-arrow">↗</a>
+          </div>
+          <div class="lifestyle-link-item">
+            <div>
+              <div class="l-link-name">Ruby Pink Retro Blouse</div>
+              <div class="l-link-cat">Festive Folks — Product Copy</div>
+            </div>
+            <a href="https://festivefolks.com/product/ruby-pink-retro-print-viscose-muslin-round-neck-popover-blouse/"
+              target="_blank" class="l-link-arrow">↗</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── EDUCATION SECTION ─────────────────── -->
+  <section class="education-section" id="education">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="s-label">10 — Education & EdTech</div>
+        <h2 class="s-title">Educational & Institutional <em>Communication</em></h2>
+      </div>
+
+      <div class="edu-grid reveal">
+        <div class="edu-card">
+          <span class="edu-card-type">Higher Education · Amity University</span>
+          <div class="edu-card-title">Amity University — Admission Communication</div>
+          <div class="edu-card-desc">Developed educational communication content for Amity University — including
+            prospective student-facing blog content addressing the "why choose Amity after Class 12" decision journey.
+            Written with empathy for young readers navigating high-stakes educational choices.</div>
+          <div class="source-links">
+            <a href="https://docs.google.com/document/d/1_Z0t09JT2qqisuWc2KLAu583S2MA05Tp72OV8jRuaCI/edit?tab=t.0"
+              target="_blank" class="source-link">Amity Content Doc</a>
+          </div>
+        </div>
+        <div class="edu-card">
+          <span class="edu-card-type">EdTech Platform Content</span>
+          <div class="edu-card-title">EdTech Learning Content</div>
+          <div class="edu-card-desc">Produced content for educational technology platforms — combining instructional
+            clarity with the engagement standards digital learners expect. Covers blog articles and educational
+            explainers designed for student audiences across Google Docs-based content workflows.</div>
+          <div class="source-links">
+            <a href="https://docs.google.com/document/d/1KBMhL1FtJ-uwohdbweRkoSZ4EgEOQbxnQMzQF5F0AV4/edit?tab=t.0"
+              target="_blank" class="source-link">EdTech Sample 01</a>
+            <a href="https://docs.google.com/document/d/1zeSS-yuxr-UwWO_aJ0BNI98ubxxigPuqnChv9zaru9s/edit?tab=t.0#heading=h.wunndm5xpu1o"
+              target="_blank" class="source-link">EdTech Sample 02</a>
+            <a href="https://docs.google.com/document/d/1uDOTAeq8haxJSHVwDIjt42Fyg_DF2A0qgBYJV6lC0R0/edit?tab=t.0"
+              target="_blank" class="source-link">EdTech Sample 03</a>
+            <a href="https://docs.google.com/document/d/1C_eccy4OFXh4Br4nphVBcazhi-wCNiMdQPhaaKFUHEI/edit?tab=t.0"
+              target="_blank" class="source-link">EdTech Sample 04</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── EXPERIENCE TIMELINE ───────────────── -->
+  <section class="timeline-section" id="experience">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="s-label">11 — Career History</div>
+        <h2 class="s-title">Professional <em>Experience</em></h2>
+        <p class="s-sub">A practice built across agencies, institutions, and independent client engagements.</p>
+      </div>
+
+      <div class="timeline reveal">
+        <div class="timeline-entry">
+          <div class="t-period">March 2024 — Present</div>
+          <div class="t-role">Content Strategist & Communication Specialist</div>
+          <div class="t-org">ANJ Creations Pvt. Ltd.</div>
+          <div class="t-desc">Leading content strategy and communication delivery across fashion, festive lifestyle, and
+            brand clients. Manages campaign writing, product communication, website content, and social media strategy.
+            Works directly with brand owners on voice, positioning, and content architecture.</div>
+        </div>
+        <div class="timeline-entry">
+          <div class="t-period">November 2023 — March 2024</div>
+          <div class="t-role">Content Writer — SEO, Tourism & Strategy</div>
+          <div class="t-org">Maiden Stride</div>
+          <div class="t-desc">Developed SEO-led blog strategies, government and institutional pitch decks, and
+            tourism-related editorial content. Delivered work across IRCTC Tourism, government communication, and B2B
+            client presentations. Built foundational expertise in multi-sector content strategy.</div>
+        </div>
+        <div class="timeline-entry">
+          <div class="t-period">July 2019 — July 2020</div>
+          <div class="t-role">Content Writer & Digital Campaign Specialist</div>
+          <div class="t-org">Equestrian India</div>
+          <div class="t-desc">Created content for India's niche equestrian market and managed digital campaigns — an
+            early assignment that established discipline for research-led writing in unfamiliar domains. Oversaw content
+            production for product listings and brand communication.</div>
+        </div>
+        <div class="timeline-entry">
+          <div class="t-period">September 2020 — December 2020</div>
+          <div class="t-role">Government Communication Intern</div>
+          <div class="t-org">NCDC — National Cooperative Development Corporation, Ministry of Cooperation</div>
+          <div class="t-desc">Wrote proposals and formal project reports for a Ministry under the Government of India.
+            Exposure to ministry-grade communication standards, policy document formatting, and institutional writing
+            requirements. A formative experience in government communication discipline.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CREDENTIALS ────────────────────────── -->
+  <section class="credentials-section" id="credentials">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="s-label">12 — Credentials & Recognition</div>
+        <h2 class="s-title">Academic Excellence & <em>Professional Recognition</em></h2>
+      </div>
+
+      <div class="creds-grid reveal">
+        <div class="cred-block">
+          <div class="cred-category">Academic Honour</div>
+          <div class="cred-item">University Gold Medal</div>
+          <div class="cred-detail">Awarded the Gold Medal in Agriculture Sciences at university level — conferred by the
+            Governor of Madhya Pradesh. Academic distinction that reflects the research rigour and communication
+            precision brought to all professional work.</div>
+        </div>
+        <div class="cred-block reveal reveal-delay-1">
+          <div class="cred-category">Public Communication</div>
+          <div class="cred-item">Debate & Elocution — Multiple Awards</div>
+          <div class="cred-detail">Won multiple competitive debate and elocution competitions — building the foundations
+            of structured persuasion, audience awareness, and argument architecture that underpin all strategic
+            communication work.</div>
+        </div>
+        <div class="cred-block reveal reveal-delay-2">
+          <div class="cred-category">Government Exposure</div>
+          <div class="cred-item">Ministry-Level Presentation Experience</div>
+          <div class="cred-detail">Directly presented decks and formal reports to senior government clients at ministry
+            and state government level — an uncommon credential for a communication professional early in practice.
+          </div>
+        </div>
+        <div class="cred-block reveal reveal-delay-3">
+          <div class="cred-category">National Campaign Work</div>
+          <div class="cred-item">Maha Kumbh 2025 · Lok Sabha 2024</div>
+          <div class="cred-detail">Communication contributions to two nationally significant events — demonstrating the
+            institutional trust extended and the communication standards required to work on India's most high-profile
+            public campaigns.</div>
+        </div>
+        <div class="cred-block">
+          <div class="cred-category">Academic Background</div>
+          <div class="cred-item">B.Sc. Agriculture Sciences</div>
+          <div class="cred-detail">A scientific academic background that informs a research-first communication
+            methodology — particularly valuable in healthcare, institutional, and policy communication where accuracy
+            cannot be compromised for style.</div>
+        </div>
+        <div class="cred-block reveal reveal-delay-1">
+          <div class="cred-category">Location & Availability</div>
+          <div class="cred-item">Kanpur, Uttar Pradesh — Operating Nationally</div>
+          <div class="cred-detail">Based in Kanpur with an established practice serving clients across India and the US
+            market. Available for long-term communication retainers, institutional projects, campaign engagements, and
+            website communication mandates.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CONTACT ────────────────────────────── -->
+  <section class="contact-section" id="contact">
+    <div class="contact-bg-text">SS</div>
+    <div class="container">
+      <div class="contact-inner">
+        <div class="reveal">
+          <h2 class="contact-headline">Let's Build Something <em>Substantial.</em></h2>
+          <p class="contact-body">If you are working on institutional communication, a healthcare content strategy, a
+            government campaign, a tourism brand, or a website that needs to perform commercially — I work at precisely
+            that intersection.</p>
+          <p class="contact-body" style="margin-top:-1rem;">I don't take every brief. I take the ones where
+            communication strategy, not just word count, is the expectation.</p>
+          <a href="mailto:shrutianoopshukla@gmail.com" class="btn-hero-primary" style="margin-top:1rem;">Send a
+            Brief</a>
+        </div>
+
+        <div class="reveal reveal-delay-2">
+          <div class="contact-info">
+            <div class="contact-row">
+              <span class="contact-row-label">Email</span>
+              <a href="mailto:shrutianoopshukla@gmail.com" class="contact-row-val">shrutianoopshukla@gmail.com</a>
+            </div>
+            <div class="contact-row">
+              <span class="contact-row-label">Phone</span>
+              <a href="tel:+919981642062" class="contact-row-val">+91 99816 42062</a>
+            </div>
+            <div class="contact-row">
+              <span class="contact-row-label">Location</span>
+              <span class="contact-row-val">Kanpur, Uttar Pradesh, India</span>
+            </div>
+            <div class="contact-row">
+              <span class="contact-row-label">Scope</span>
+              <span class="contact-row-val">India & US Market Clients</span>
+            </div>
+          </div>
+
+          <div class="contact-availability">
+            <div class="avail-status"><span class="avail-dot"></span>Currently Available</div>
+            <div class="avail-text">Open to institutional communication retainers, long-form content engagements,
+              healthcare content strategy, government campaign writing, and website content projects. Response within 24
+              hours.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ─────────────────────────────── -->
+  <footer>
+    <div class="footer-name">Shruti Shukla — Strategic Communication Specialist</div>
+    <div class="footer-note">Kanpur · India · © 2025</div>
+  </footer>
+
+  <!-- ─── SCRIPTS ────────────────────────────── -->
+  <script>
+    // Custom cursor
+    const dot = document.getElementById('cursorDot');
+    const ring = document.getElementById('cursorRing');
+    let mouseX = 0, mouseY = 0;
+
+    document.addEventListener('mousemove', (e) => {
+      mouseX = e.clientX; mouseY = e.clientY;
+      dot.style.left = mouseX + 'px';
+      dot.style.top = mouseY + 'px';
+      ring.style.left = mouseX + 'px';
+      ring.style.top = mouseY + 'px';
+    });
+
+    document.querySelectorAll('a, button').forEach(el => {
+      el.addEventListener('mouseenter', () => {
+        ring.style.width = '56px';
+        ring.style.height = '56px';
+        ring.style.borderColor = 'rgba(197,150,58,0.8)';
+      });
+      el.addEventListener('mouseleave', () => {
+        ring.style.width = '36px';
+        ring.style.height = '36px';
+        ring.style.borderColor = 'rgba(197,150,58,0.5)';
+      });
+    });
+
+    // Nav scroll effect
+    const nav = document.getElementById('mainNav');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 60) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+    });
+
+    // GitHub Pages friendly external-link safety
+    document.querySelectorAll('a[target="_blank"]').forEach(link => {
+      link.setAttribute('rel', 'noopener noreferrer');
+    });
+
+    // Stacked panel scroll: each section pins while the next covers it
+    const motionAllowed = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const parallaxSections = motionAllowed
+      ? Array.from(document.querySelectorAll('section'))
+      : [];
+
+    parallaxSections.forEach((section, index) => {
+      section.classList.add('parallax-section');
+      section.style.setProperty('--stack-index', index + 1);
+    });
+
+    let parallaxTicking = false;
+    const updateParallax = () => {
+      const viewportH = window.innerHeight || 1;
+      parallaxSections.forEach(section => {
+        const rect = section.getBoundingClientRect();
+        if (rect.bottom < 0 || rect.top > viewportH) return;
+        const progress = Math.max(0, Math.min(1, 1 - rect.top / viewportH));
+        const offset = (1 - progress) * 140;
+        const scale = 0.965 + progress * 0.035;
+        section.style.setProperty('--parallax-offset', `${offset}px`);
+        section.style.setProperty('--parallax-scale', scale.toFixed(3));
+      });
+      parallaxTicking = false;
+    };
+
+    if (motionAllowed) {
+      window.addEventListener('scroll', () => {
+        if (!parallaxTicking) {
+          window.requestAnimationFrame(updateParallax);
+          parallaxTicking = true;
+        }
+      }, { passive: true });
+      window.addEventListener('resize', updateParallax);
+      updateParallax();
+    }
+
+    // Scroll reveal
+    const revealEls = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+    revealEls.forEach(el => revealObserver.observe(el));
+
+    // Smooth marquee pause on hover
+    const marqueeTrack = document.querySelector('.marquee-track');
+    if (marqueeTrack) {
+      marqueeTrack.addEventListener('mouseenter', () => {
+        marqueeTrack.style.animationPlayState = 'paused';
+      });
+      marqueeTrack.addEventListener('mouseleave', () => {
+        marqueeTrack.style.animationPlayState = 'running';
+      });
+    }
+  </script>
+</body>
+
+</html>
